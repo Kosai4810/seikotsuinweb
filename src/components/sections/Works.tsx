@@ -38,7 +38,7 @@ export function Works() {
           ))}
         </div>
         <div className="mt-8 border border-[#bfa778] bg-[#f7f2e8] px-5 py-5 text-center">
-          <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-red-500 decoration-2">128,000円（税込）〜</span></p><p className="text-base font-bold tracking-wide md:text-xl">このようなホームページを、<span className="text-[#806334]">先着<span className="mx-1 inline-block text-3xl md:text-4xl leading-none">3</span>院限定98,000円（税込）〜</span>で制作します。</p>
+          <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-[#a88750] decoration-2">128,000円（税込）〜</span></p><p className="text-base font-bold tracking-wide md:text-xl">このようなホームページを、<span className="text-[#806334]">先着<span className="mx-1 inline-block font-serif text-3xl md:text-4xl leading-none tracking-tight">3</span>院限定98,000円（税込）〜</span>で制作します。</p>
         </div>
       </div>
     </section>
