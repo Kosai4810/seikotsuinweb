@@ -23,9 +23,9 @@ export function Pricing() {
         <p className="text-[var(--sumi-nezumi)] mb-8 md:mb-10">院の現在地と必要な導線に合わせてお選びいただけます。</p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {plans.map((plan) => <article id={plan.monitor ? "monitor-plan" : undefined} key={plan.name} className={`bg-white p-8 lg:p-10 relative border scroll-mt-32 ${plan.monitor ? "border-[#a88750] bg-[#fcf8ef] lg:scale-[1.035] z-10 shadow-[0_18px_50px_rgba(83,63,30,0.12)]" : plan.recommended ? "border-[var(--fukai-ai)]" : "border-[var(--usuzumi-line)]"}`}>
-            {plan.monitor && <span className="inline-block bg-[#a88750] text-white text-xs px-4 py-2 mb-5 tracking-wide">先着3院限定</span>}
+            {plan.monitor && <span className="inline-flex items-baseline bg-[#a88750] text-white text-xs px-4 py-2 mb-5 tracking-wide">先着<strong className="mx-1 text-3xl leading-none">3</strong>院限定</span>}
             {plan.recommended && <span className="absolute top-0 right-0 bg-[var(--fukai-ai)] text-white text-xs px-4 py-2">おすすめ</span>}
-            <h3 className="heading-md text-lg mb-5 pr-16">{plan.name}</h3>{plan.regularPrice && <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through">{plan.regularPrice}</span> のところ</p>}<p className={`${plan.monitor ? "text-3xl text-[#806334]" : "text-2xl"} font-medium mb-8`}>{plan.price}</p><FeatureList features={plan.features} />
+            <h3 className="heading-md text-lg mb-5 pr-16">{plan.name}</h3>{plan.regularPrice && <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-red-500 decoration-2">{plan.regularPrice}</span></p>}<p className={`${plan.monitor ? "text-3xl text-[#806334]" : "text-2xl"} font-medium mb-8`}>{plan.price}</p><FeatureList features={plan.features} />
             {plan.conditions && <div className="mt-8 pt-6 border-t border-[#d8c8aa]"><p className="text-sm font-medium mb-4">モニター条件</p><FeatureList features={plan.conditions} /></div>}
             <p className="mt-8 pt-6 border-t text-xs leading-relaxed text-[var(--nibi)]">院の規模、ページ数、撮影の有無、機能によって料金は変動します。</p>
             {plan.monitor && <a href="#contact-form" className="mt-7 w-full inline-flex justify-center bg-[#a88750] text-white px-5 py-4 text-sm hover:bg-[#947442] transition-colors">モニター制作について相談する</a>}

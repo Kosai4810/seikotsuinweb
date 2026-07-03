@@ -16,7 +16,7 @@ export function ValueComparison() {
       <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-px bg-[#cfc4b0]">
         {values.map(([number,title,description]) => <article key={number} className="bg-[var(--kinari)] p-4 md:p-5"><span className="inline-flex rounded-full border border-[#a88750] px-2 py-1 text-[10px] font-medium tracking-wider text-[#806334]">{number}</span><h3 className="font-medium text-sm md:text-base mt-3 mb-2 leading-snug">{title}</h3><p className="text-xs md:text-sm text-[var(--sumi-nezumi)] leading-6">{description}</p></article>)}
       </div>
-      <div className="mt-6 border border-[#a88750] bg-[#f7f2e8] px-5 py-5 text-center"><p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through">128,000円（税込）〜</span> のところ</p><p className="font-serif text-lg md:text-2xl tracking-wide">これらを含んで、<span className="block sm:inline text-[#806334] mt-2 sm:mt-0"><strong className="text-2xl md:text-4xl font-medium">先着3院限定 98,000円</strong>（税込）〜</span></p></div>
+      <div className="mt-6 border border-[#a88750] bg-[#f7f2e8] px-5 py-5 text-center"><p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-red-500 decoration-2">128,000円（税込）〜</span></p><p className="font-serif text-lg md:text-2xl tracking-wide">これらを含んで、<span className="block sm:inline text-[#806334] mt-2 sm:mt-0"><strong className="text-2xl md:text-4xl font-medium">先着<span className="mx-1 inline-block text-4xl md:text-6xl leading-none">3</span>院限定 98,000円</strong>（税込）〜</span></p></div>
     </div>
   </section>;
 }
