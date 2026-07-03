@@ -38,7 +38,7 @@ export function Works() {
           ))}
         </div>
         <div className="mt-8 border border-[#bfa778] bg-[#f7f2e8] px-5 py-5 text-center">
-          <p className="text-base font-bold tracking-wide md:text-xl">このようなホームページを、<span className="text-[#806334]">先着3院限定98,000円（税込）〜</span>で制作します。</p>
+          <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through">128,000円（税込）〜</span> のところ</p><p className="text-base font-bold tracking-wide md:text-xl">このようなホームページを、<span className="text-[#806334]">先着3院限定98,000円（税込）〜</span>で制作します。</p>
         </div>
       </div>
     </section>

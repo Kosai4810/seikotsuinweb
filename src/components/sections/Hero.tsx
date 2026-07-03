@@ -34,7 +34,7 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap items-end gap-x-4 gap-y-1 mt-2">
               <span className="inline-flex bg-[#b99a62] text-[#171512] px-3 py-1 text-sm md:text-base font-medium tracking-wide">先着3院限定</span>
-              <p className="font-serif leading-none"><strong className="text-5xl md:text-7xl text-[#e0c28a] font-medium tracking-tight">98,000</strong><span className="text-xl md:text-2xl ml-1">円〜</span></p>
+              <div><p className="mb-1 text-xs tracking-wide text-white/65">通常 <span className="line-through decoration-white/60">128,000円</span> のところ</p><p className="font-serif leading-none"><strong className="text-5xl md:text-7xl text-[#e0c28a] font-medium tracking-tight">98,000</strong><span className="text-xl md:text-2xl ml-1">円〜</span></p></div>
             </div>
           </div>
 
