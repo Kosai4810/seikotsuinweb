@@ -2,8 +2,6 @@ import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { WhySpecialized } from "@/components/sections/WhySpecialized";
-import { CommonProblems } from "@/components/sections/CommonProblems";
-import { Approach } from "@/components/sections/Approach";
 import { Works } from "@/components/sections/Works";
 import { Flow } from "@/components/sections/Flow";
 import { Pricing } from "@/components/sections/Pricing";
@@ -13,7 +11,8 @@ import { Services } from "@/components/sections/Services";
 import { MobileCTA } from "@/components/common/MobileCTA";
 import { ValueComparison } from "@/components/sections/ValueComparison";
 import { siteConfig } from "@/config/site";
-import { Articles } from "@/components/sections/Articles";
+import { PageGuide } from "@/components/common/PageGuide";
+import { EngagementLayer } from "@/components/common/EngagementLayer";
 
 export default function Home() {
   const structuredData = {
@@ -29,20 +28,19 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PageGuide />
         <ValueComparison />
-        <WhySpecialized />
-        <Services />
-        <CommonProblems />
-        <Approach />
         <Works />
-        <Flow />
         <Pricing />
-        <Articles />
+        <Services />
+        <WhySpecialized />
+        <Flow />
         <FAQ />
         <Contact />
       </main>
       <Footer />
       <MobileCTA />
+      <EngagementLayer />
     </>
   );
 }

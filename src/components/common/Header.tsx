@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { siteConfig } from "@/config/site";
 
 const navItems = [
   { label: "TOP", href: "/" },
@@ -57,23 +56,23 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-7" aria-label="メインナビゲーション">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="text-sm text-[var(--sumi-nezumi)] hover:text-[var(--sumi)] transition-colors duration-300 tracking-wide"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* CTA Button */}
-          <a
+          <Link
             href="/#contact-form"
             className="hidden lg:inline-flex items-center px-6 py-3 text-sm bg-[var(--fukai-ai)] text-white tracking-wide hover:bg-[#152d4a] transition-colors duration-300"
           >
             無料相談を申し込む
-          </a>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -114,22 +113,22 @@ export function Header() {
       >
         <nav className="px-6 py-8 space-y-6" aria-label="モバイルナビゲーション">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="block text-base text-[var(--sumi-nezumi)] hover:text-[var(--sumi)] transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="/#contact-form"
             className="block w-full text-center py-4 bg-[var(--fukai-ai)] text-white tracking-wide"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             無料相談を申し込む
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

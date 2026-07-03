@@ -10,10 +10,10 @@ const samples = [
 
 export function Works() {
   return (
-    <section id="works" className="py-24 md:py-32 bg-[var(--usuzumi)]">
+    <section id="works" className="scroll-mt-24 py-16 md:py-20 bg-[var(--usuzumi)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionLabel number="05" label="Sample Works" />
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-8 md:mb-10">
           <h2 className="heading-lg text-2xl md:text-3xl mb-5">サンプル制作</h2>
           <p className="text-[var(--sumi-nezumi)] leading-relaxed">
             架空の整骨院・接骨院を想定したWebサイトの制作例です。実在の院、取引実績、成果を示すものではありません。
@@ -36,6 +36,9 @@ export function Works() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-8 border border-[#bfa778] bg-[#f7f2e8] px-5 py-5 text-center">
+          <p className="text-base font-bold tracking-wide md:text-xl">このようなホームページを、<span className="text-[#806334]">先着3院限定98,000円（税込）〜</span>で制作します。</p>
         </div>
       </div>
     </section>

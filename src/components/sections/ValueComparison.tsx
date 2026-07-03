@@ -7,11 +7,11 @@ const values = [
 ];
 
 export function ValueComparison() {
-  return <section className="py-16 md:py-20 bg-[#eee8dc]">
+  return <section className="py-14 md:py-18 bg-[#eee8dc]">
     <div className="max-w-7xl mx-auto px-6 lg:px-12">
       <div className="max-w-3xl mb-8">
-        <h2 className="heading-lg text-2xl md:text-4xl mb-4">低価格でも、必要なものは省きません。</h2>
-        <p className="text-sm md:text-base text-[var(--sumi-nezumi)] leading-7">単にホームページを作るだけではありません。患者さんが院を知り、安心し、問い合わせるまでに必要なWeb導線を、整骨院専門の視点でまとめて整えます。</p>
+        <h2 className="heading-lg text-2xl md:text-4xl mb-3">低価格でも、必要なものは省きません。</h2>
+        <p className="text-sm md:text-base text-[var(--sumi-nezumi)] leading-7">ホームページだけではありません。患者さんが院を知り、安心し、問い合わせるまでのWeb環境を、整骨院専門の視点でまとめて整えます。</p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-px bg-[#cfc4b0]">
         {values.map(([number,title,description]) => <article key={number} className="bg-[var(--kinari)] p-4 md:p-5"><span className="inline-flex rounded-full border border-[#a88750] px-2 py-1 text-[10px] font-medium tracking-wider text-[#806334]">{number}</span><h3 className="font-medium text-sm md:text-base mt-3 mb-2 leading-snug">{title}</h3><p className="text-xs md:text-sm text-[var(--sumi-nezumi)] leading-6">{description}</p></article>)}

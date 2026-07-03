@@ -16,11 +16,11 @@ const FeatureList = ({ features }: { features: readonly string[] }) => <ul class
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 md:py-32 bg-[var(--kinari)]">
+    <section id="pricing" className="scroll-mt-24 py-16 md:py-20 bg-[var(--kinari)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionLabel number="07" label="Pricing" />
         <h2 className="heading-lg text-2xl md:text-3xl mb-4">必要な制作をまとめて、<br />98,000円から。</h2>
-        <p className="text-[var(--sumi-nezumi)] mb-16">院の現在地と必要な導線に合わせてお選びいただけます。</p>
+        <p className="text-[var(--sumi-nezumi)] mb-8 md:mb-10">院の現在地と必要な導線に合わせてお選びいただけます。</p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {plans.map((plan) => <article id={plan.monitor ? "monitor-plan" : undefined} key={plan.name} className={`bg-white p-8 lg:p-10 relative border scroll-mt-32 ${plan.monitor ? "border-[#a88750] bg-[#fcf8ef] lg:scale-[1.035] z-10 shadow-[0_18px_50px_rgba(83,63,30,0.12)]" : plan.recommended ? "border-[var(--fukai-ai)]" : "border-[var(--usuzumi-line)]"}`}>
             {plan.monitor && <span className="inline-block bg-[#a88750] text-white text-xs px-4 py-2 mb-5 tracking-wide">先着3院限定</span>}
@@ -31,7 +31,7 @@ export function Pricing() {
             {plan.monitor && <a href="#contact-form" className="mt-7 w-full inline-flex justify-center bg-[#a88750] text-white px-5 py-4 text-sm hover:bg-[#947442] transition-colors">モニター制作について相談する</a>}
           </article>)}
         </div>
-        <div className="mt-24 mb-12"><h2 className="heading-lg text-2xl md:text-3xl mb-4">公開後の月額サポート</h2><p className="text-[var(--sumi-nezumi)]">公開後の更新と改善も、必要な範囲で支援します。</p></div>
+        <div className="mt-14 md:mt-16 mb-8"><h2 className="heading-lg text-2xl md:text-3xl mb-4">公開後の月額サポート</h2><p className="text-[var(--sumi-nezumi)]">公開後の更新と改善も、必要な範囲で支援します。</p></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--usuzumi-line)]">{supports.map((s) => <article key={s.name} className="bg-white p-8 md:p-12"><h3 className="heading-md text-lg mb-3">{s.name}</h3><p className="text-xl font-medium mb-8">{s.price}</p><FeatureList features={s.features} /></article>)}</div>
         <p className="text-sm text-[var(--sumi-nezumi)] mt-6">※ 広告費、撮影費、大幅なページ追加は別途となります。</p>
         <div className="mt-12"><CTAGroup /></div>

@@ -42,7 +42,7 @@ const steps = [
 
 export function Flow() {
   return (
-    <section id="flow" className="py-16 md:py-20 bg-white">
+    <section id="flow" className="scroll-mt-24 py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionLabel number="05" label="Process" />
 

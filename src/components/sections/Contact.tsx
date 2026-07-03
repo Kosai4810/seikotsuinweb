@@ -29,6 +29,7 @@ export function Contact() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "送信できませんでした。");
       setState("success");
+      localStorage.setItem("seikotsuin-contact-submitted", String(Date.now()));
       form.reset();
     } catch (error) {
       setState("error");
@@ -37,7 +38,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[var(--sumi)]">
+    <section id="contact" className="py-16 md:py-20 bg-[var(--sumi)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="col-span-1 lg:col-span-5 min-w-0">
           <SectionLabel number="09" label="Contact" tone="light" />

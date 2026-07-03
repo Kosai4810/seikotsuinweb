@@ -30,13 +30,11 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-16 md:py-20 bg-[var(--kinari)]">
+    <section id="services" className="scroll-mt-24 py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionLabel number="02" label="Services" />
         <div className="max-w-3xl mb-9 md:mb-12">
-          <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-4">
-            ホームページだけではありません。<br className="hidden sm:block" />予約につながるWeb環境を、まとめて整えます。
-          </h2>
+          <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-4">提供サービス</h2>
           <p className="text-[var(--sumi-nezumi)] leading-relaxed">
             ツールを個別に用意するだけでなく、患者さんが知り、比較し、相談するまでの導線を一緒に整えます。
           </p>

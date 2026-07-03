@@ -45,14 +45,14 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-32 bg-white">
+    <section id="faq" className="scroll-mt-24 py-16 md:py-20 bg-[var(--kinari)]">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         <SectionLabel number="07" label="FAQ" />
 
         <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-4">
           よくある質問
         </h2>
-        <p className="text-[var(--sumi-nezumi)] mb-16">
+        <p className="text-[var(--sumi-nezumi)] mb-8 md:mb-10">
           院長様からよくいただくご質問をまとめました
         </p>
 
