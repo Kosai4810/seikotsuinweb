@@ -19,7 +19,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@graph": [
       { "@type": "WebSite", "@id": `${siteConfig.url}/#website`, url: siteConfig.url, name: siteConfig.name, inLanguage: "ja" },
-      { "@type": "Service", "@id": `${siteConfig.url}/#service`, name: "整骨院・接骨院専門のホームページ制作・開業Web支援", serviceType: "ホームページ制作・開業Web支援", areaServed: "JP", offers: { "@type": "Offer", priceCurrency: "JPY", price: "98000", description: "先着3院限定モニター制作プラン。条件・追加費用は料金欄をご確認ください。" } },
+      { "@type": "Service", "@id": `${siteConfig.url}/#service`, name: "整骨院・接骨院・鍼灸院・整体院専門のホームページ制作・開業Web支援", serviceType: "ホームページ制作・開業Web支援", areaServed: "JP", offers: { "@type": "Offer", priceCurrency: "JPY", price: "98000", description: "先着3院限定モニター制作プラン。条件・追加費用は料金欄をご確認ください。" } },
     ],
   };
   return (

@@ -2,13 +2,17 @@ import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 const strengths = [
-  ["整骨院に必要な情報を整理", "施術内容、料金、アクセス、予約方法を、患者さんが比較しやすい順番に整えます。"],
+  ["治療院に必要な情報を整理", "施術内容、料金、アクセス、予約方法を、患者さんが比較しやすい順番に整えます。"],
   ["院ごとの強みを言語化", "ヒアリングから院の考え方や地域で選ばれる理由を見つけ、伝わる言葉にします。"],
   ["患者目線で予約導線を設計", "スマートフォンから電話・メール・フォームへ、迷わず進める流れを設計します。"],
-  ["公開後の更新もサポート", "営業時間や写真の変更、運用相談など、公開後も必要な範囲で伴走します。"],
+  ["無料診断から改善点を整理", "既存サイトがある場合は、伝わりにくい箇所と優先して直すべき導線を整理します。"],
 ] as const;
 
 const problems = ["テンプレート感が強い", "院の強みが伝わらない", "問い合わせ導線が分かりにくい", "情報が更新されていない"];
+const promiseCards = [
+  "営業担当ではなく、制作担当が直接ヒアリングします。",
+  "小規模だから、柔軟・低価格・丁寧に対応できます。",
+] as const;
 
 export function WhySpecialized() {
   return (
@@ -18,11 +22,19 @@ export function WhySpecialized() {
         <div className="grid items-start gap-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-14">
           <div>
             <h2 className="heading-lg max-w-3xl text-2xl text-[var(--sumi)] md:text-3xl">
-              整骨院専門だから、<br className="hidden sm:block" />院ごとの強みと患者さんの導線を設計できます。
+              整骨院・接骨院・鍼灸院・整体院に特化しているから、<br className="hidden sm:block" />院ごとの強みと患者さんの導線を設計できます。
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--sumi-nezumi)] md:text-base">
-              汎用テンプレートに当てはめず、院の内側にある価値と、患者さんが来院までに必要とする情報を一つの流れとして組み立てます。
+              汎用テンプレートに当てはめず、院の内側にある価値と、患者さんが来院までに必要とする情報を一つの流れとして組み立てます。既存サイトの改善、開業前の情報整理、GoogleマップやLINEへの導線まで、現在地に合わせて提案します。
             </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {promiseCards.map((promise) => (
+                <div key={promise} className="border-l-2 border-[#a88750] bg-white/80 px-5 py-4 shadow-sm">
+                  <p className="text-[10px] font-bold tracking-[.18em] text-[#96733d]">DIRECT SUPPORT</p>
+                  <p className="mt-2 text-base font-bold leading-relaxed text-[var(--sumi)]">{promise}</p>
+                </div>
+              ))}
+            </div>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {strengths.map(([title, description], index) => (
                 <article key={title} className="rounded-lg border border-[#d4c8b3] bg-white/85 p-5">

@@ -42,9 +42,9 @@ export function Contact() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="col-span-1 lg:col-span-5 min-w-0">
           <SectionLabel number="09" label="Contact" tone="light" />
-          <h2 className="heading-lg text-2xl md:text-3xl text-white mb-6">先着3院のモニター制作を受付中です。</h2>
+          <h2 className="heading-lg text-2xl md:text-3xl text-white mb-6">先着3院のモニター制作と、無料HP診断を受付中です。</h2>
           <p className="text-white/70 leading-loose mb-10">
-            開業前の準備から、現在のWeb導線の見直しまで。状況をお聞きし、必要な支援を整理します。
+            既存HPがある院は改善点を3つ整理します。HPがない院は、開業・集客に必要な導線から一緒に整理します。
           </p>
           <CTAGroup dark />
           <div className="mt-10 pt-8 border-t border-white/20 space-y-2 text-sm text-white/70">
@@ -62,8 +62,8 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 min-w-0" noValidate>
-                <h3 className="heading-md text-lg mb-3">無料相談フォーム</h3>
-                <p className="text-sm text-[var(--sumi-nezumi)] leading-relaxed mb-8">まだ依頼内容が決まっていなくても問題ありません。電話番号またはメールアドレスをご入力いただければ、現在の状況をお聞きした上で必要な内容をご提案します。</p>
+                <h3 className="heading-md text-lg mb-3">無料HP診断・相談フォーム</h3>
+                <p className="text-sm text-[var(--sumi-nezumi)] leading-relaxed mb-8">まだ依頼内容が決まっていなくても問題ありません。現在のホームページや開業準備の状況をお聞きし、優先して整えるべき内容をご提案します。</p>
                 <Field label="お名前" name="name" required className={inputClass} />
                 <Field label="院名または開業予定の院名" name="clinic" className={inputClass} />
                 <div className="grid sm:grid-cols-2 gap-6">
@@ -76,7 +76,7 @@ export function Contact() {
                 <label className="flex items-start gap-3 text-sm text-[var(--sumi-nezumi)]"><input type="checkbox" name="privacy" value="agreed" required className="mt-1" /><span><Link href="/privacy" className="underline">プライバシーポリシー</Link>に同意する <Required /></span></label>
                 {state === "error" && <p role="alert" className="p-4 bg-red-50 text-red-800 text-sm">{message}</p>}
                 <button type="submit" disabled={state === "sending"} className="w-full py-4 bg-[var(--fukai-ai)] text-white text-sm tracking-wider hover:bg-[#152d4a] disabled:opacity-50">
-                  {state === "sending" ? "送信中…" : "無料相談を申し込む"}
+                  {state === "sending" ? "送信中…" : "無料HP診断を申し込む"}
                 </button>
               </form>
             )}

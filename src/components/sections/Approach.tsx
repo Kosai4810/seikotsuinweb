@@ -26,6 +26,11 @@ const approaches = [
   },
 ];
 
+const promiseCards = [
+  "営業担当ではなく、制作担当が直接ヒアリングします。",
+  "小規模だから、柔軟・低価格・丁寧に対応できます。",
+] as const;
+
 export function Approach() {
   return (
     <section id="approach" className="py-32 bg-white">
@@ -57,6 +62,15 @@ export function Approach() {
               広告代理店のような派手な提案はしません。<br />
               院の内側にある価値を、丁寧に引き出し、伝えることを大切にしています。
             </p>
+
+            <div className="mb-14 grid gap-3 sm:grid-cols-2">
+              {promiseCards.map((promise) => (
+                <div key={promise} className="border-l-2 border-[#a88750] bg-[#f8f4ec] px-5 py-4">
+                  <p className="text-[10px] font-bold tracking-[.18em] text-[#96733d]">DIRECT SUPPORT</p>
+                  <p className="mt-2 text-base font-bold leading-relaxed text-[var(--sumi)]">{promise}</p>
+                </div>
+              ))}
+            </div>
 
             {/* Approaches list */}
             <div className="space-y-12">

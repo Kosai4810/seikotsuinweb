@@ -50,42 +50,21 @@ export function Flow() {
           制作の流れ
         </h2>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="hidden lg:block absolute left-[88px] top-0 bottom-0 w-px bg-[var(--usuzumi-line)]" />
-
+        <div>
           <div className="space-y-2 lg:space-y-0 border-y border-[var(--usuzumi-line)]">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="relative grid grid-cols-12 gap-3 lg:gap-6 py-5 lg:py-6 border-b last:border-b-0 border-[var(--usuzumi-line)]"
+                className="grid gap-3 py-5 lg:grid-cols-[minmax(280px,0.9fr)_1.6fr] lg:items-center lg:gap-8 lg:py-6 border-b last:border-b-0 border-[var(--usuzumi-line)]"
               >
-                {/* Number & Duration */}
-                <div className="col-span-12 lg:col-span-2 flex items-center gap-3">
-                  <div className="relative">
-                    <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--fukai-ai)] font-inter text-xs text-white">
-                      {step.number}
-                    </span>
-                    {/* Dot on timeline */}
-                    <div className="hidden lg:block absolute -right-[57px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[var(--fukai-ai)]" />
+                <div className="flex items-center gap-3">
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--fukai-ai)] font-inter text-xs text-white">{step.number}</span>
+                  <div className="flex min-w-0 flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 className="heading-md text-base md:text-lg text-[var(--sumi)]">{step.title}</h3>
+                    <span className="text-xs text-[var(--nibi)] tracking-wide">{step.duration}</span>
                   </div>
-                  <span className="text-xs text-[var(--nibi)] tracking-wide">
-                    {step.duration}
-                  </span>
                 </div>
-
-                {/* Content */}
-                <div className="col-span-12 lg:col-span-8 lg:col-start-4 grid md:grid-cols-[190px_1fr] gap-2 md:gap-6 items-start">
-                  <h3 className="heading-md text-base md:text-lg text-[var(--sumi)]">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-[var(--sumi-nezumi)] leading-6 max-w-xl">
-                    {step.description}
-                  </p>
-                </div>
-
-                {/* Separator for mobile */}
+                <p className="pl-12 text-sm text-[var(--sumi-nezumi)] leading-6 lg:pl-0">{step.description}</p>
               </div>
             ))}
           </div>
