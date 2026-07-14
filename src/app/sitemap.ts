@@ -5,6 +5,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     { path: "", priority: 1, changeFrequency: "weekly" as const },
     { path: "/seikotsuin-homepage", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/sekotsuin-homepage", priority: 0.82, changeFrequency: "monthly" as const },
+    { path: "/shinkyuin-homepage", priority: 0.82, changeFrequency: "monthly" as const },
+    { path: "/seitai-homepage", priority: 0.82, changeFrequency: "monthly" as const },
+    { path: "/seikotsuin-homepage-cost", priority: 0.86, changeFrequency: "monthly" as const },
     { path: "/seikotsuin-opening", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/privacy", priority: 0.3, changeFrequency: "yearly" as const },
     { path: "/company", priority: 0.3, changeFrequency: "yearly" as const },

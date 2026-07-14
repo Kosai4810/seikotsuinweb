@@ -2,19 +2,19 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { CTAGroup } from "@/components/ui/CTAGroup";
 
 const plans = [
-  { name: "モニター制作プラン", tagline: "院の魅力や詳細を十分に伝えたい人向け", price: "98,000円（税込）〜", regularPrice: "128,000円（税込）〜", monitor: true, features: ["5ページ程度のホームページ", "スマートフォン対応", { label: "問い合わせフォーム", highlight: true }, "メール・電話・Googleマップへの導線", "基本的なSEO設定", "修正2回", { label: "公開後1か月サポート", highlight: true }], conditions: ["制作したホームページを整骨院webの制作事例として掲載可能な院", "公開後の感想または簡単なインタビューに協力いただける院", "ホームページ上に「お客様の声」として感想を掲載可能な院", "先着3院に達した時点で受付終了", "撮影費、ドメイン費、有料機能、追加ページは別途見積り"] },
-  { name: "集客スタートプラン", tagline: "Webサイトからの集客を本格的に考える人向け", price: "198,000円（税込）〜", recommended: true, features: [{ label: "モニター制作プランの内容すべて", highlight: true }, { label: "Googleビジネスプロフィール初期整備", highlight: true }, { label: "SEO対策", highlight: true }, "公開後2か月サポート"] },
-  { name: "開業フルサポートプラン", tagline: "Webサイトだけでなく、その他SNS・名刺で動線をさらに強固にしたい人向け", price: "298,000円（税込）〜", features: [{ label: "集客スタートプランの内容すべて", highlight: true }, "Instagram初期設計", "ロゴまたは簡易ビジュアル制作", "チラシまたは名刺デザイン", "開業前の集客導線設計", "公開後3か月サポート"] },
+  { name: "スターター制作プラン", tagline: "院の魅力や詳細を十分に伝えたい人向け", price: "98,000円（税込）〜", regularPrice: "128,000円（税込）〜", monitor: true, features: ["5ページ程度のホームページ", "スマートフォン対応", { label: "問い合わせフォーム", highlight: true }, "メール・電話・Googleマップへの導線", "基本的なSEO設定", "修正2回", { label: "公開後1か月サポート", highlight: true }], conditions: ["先着3院に達した時点で受付終了", "撮影費、ドメイン費、有料機能、追加ページは別途見積り", "内容に応じて必要なページ数・導線を個別に整理します"] },
+  { name: "集客スタートプラン", tagline: "Webサイトからの集客を本格的に考える人向け", price: "198,000円（税込）〜", recommended: true, features: [{ label: "スターター制作プランの内容すべて", highlight: true }, { label: "Googleビジネスプロフィール初期整備", highlight: true }, { label: "SEO対策", highlight: true }, { label: "公式LINE・予約システム構築", highlight: true }, "公開後2か月サポート"] },
+  { name: "開業フルサポートプラン", tagline: "Webサイトだけでなく、その他SNS・名刺で動線をさらに強固にしたい人向け", price: "298,000円（税込）〜", features: [{ label: "集客スタートプランの内容すべて", highlight: true }, "Instagram初期設計", { label: "広告運用代行", highlight: true }, "ロゴまたは簡易ビジュアル制作", "チラシまたは名刺デザイン", "開業前の集客導線設計", "公開後3か月サポート"] },
 ];
 
 const supports = [
   { name: "Web保守サポート", price: "月額9,800円（税込）〜", features: ["文章や写真の軽微な変更", "営業時間・休診日の更新", "サーバー・ドメイン管理", "月1回のお知らせ更新", "メールでの相談対応"] },
-  { name: "集客運用サポート", price: "月額29,800円（税込）〜", features: ["Googleマップ投稿", "お知らせ文作成", "Instagram投稿サポート", "口コミ返信文作成", "アクセス数・問い合わせ数の簡易レポート", "集客導線の改善提案"] },
+  { name: "集客運用サポート", price: "月額39,800円（税込）〜", features: ["Googleマップ投稿", "お知らせ文作成", "Instagram投稿サポート", { label: "公式LINE運用", highlight: true }, { label: "広告代行", highlight: true }, "口コミ返信文作成", "アクセス数・問い合わせ数の簡易レポート", "集客導線の改善提案"] },
 ];
 
 const priceReasons = [
   ["治療院向けに構成を整理済み", "患者さんが知りたい情報、予約導線、Googleマップ連携など、必要な型をあらかじめ絞っています。"],
-  ["モニター掲載にご協力いただくため", "制作事例や感想の掲載にご協力いただく代わりに、通常より低価格で提供しています。"],
+  ["制作範囲を標準化しているため", "治療院に必要な基本構成と導線をあらかじめ整理し、初期設計の無駄を抑えています。"],
   ["必要なものから始める設計", "最初から大規模に作り込まず、公開後の反応を見ながらLINE・広告・SNSへ拡張できます。"],
 ] as const;
 
@@ -43,7 +43,7 @@ export function Pricing() {
   return (
     <section id="pricing" className="scroll-mt-24 py-16 md:py-20 bg-[var(--kinari)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionLabel number="07" label="Pricing" />
+        <SectionLabel number="02" label="Pricing" />
         <h2 className="heading-lg text-2xl md:text-3xl mb-4">治療院のWeb導線スターターパックを、<br />98,000円から。</h2>
         <p className="text-[var(--sumi-nezumi)] mb-8 md:mb-10">ホームページ単体ではなく、患者さんが見つけて、比較して、相談するまでの導線を必要な範囲で整えます。</p>
         <div className="mb-10 grid grid-cols-1 gap-px border border-[#d8c8aa] bg-[#d8c8aa] md:grid-cols-3">
@@ -63,9 +63,9 @@ export function Pricing() {
             <h3 className={`heading-md text-xl md:text-2xl mb-4 ${plan.monitor ? "pr-24 md:pr-28" : "pr-16"}`}>{plan.name}</h3>
             <p className="mb-6 border-l-2 border-[#b58b45] pl-3 text-sm md:text-base font-bold leading-relaxed text-[#6f5528]">{plan.tagline}</p>
             {plan.regularPrice && <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-[#a88750] decoration-2">{plan.regularPrice}</span></p>}<PriceText price={plan.price} monitor={plan.monitor} /><FeatureList features={plan.features} />
-            {plan.conditions && <div className="mt-8 pt-6 border-t border-[#d8c8aa]"><p className="text-sm font-medium mb-4">モニター条件</p><FeatureList features={plan.conditions} /></div>}
+            {plan.conditions && <div className="mt-8 pt-6 border-t border-[#d8c8aa]"><p className="text-sm font-medium mb-4">プラン条件</p><FeatureList features={plan.conditions} /></div>}
             <p className="mt-8 pt-6 border-t text-xs leading-relaxed text-[var(--nibi)]">院の規模、ページ数、撮影の有無、機能によって料金は変動します。</p>
-            {plan.monitor && <a href="#contact-form" className="mt-7 w-full inline-flex justify-center bg-[#a88750] text-white px-5 py-4 text-sm hover:bg-[#947442] transition-colors">モニター制作について相談する</a>}
+            {plan.monitor && <a href="#contact-form" className="mt-7 w-full inline-flex justify-center bg-[#a88750] text-white px-5 py-4 text-sm hover:bg-[#947442] transition-colors">制作について相談する</a>}
           </article>)}
         </div>
         <div className="mt-14 md:mt-16 mb-8"><h2 className="heading-lg text-2xl md:text-3xl mb-4">公開後の月額サポート</h2><p className="text-[var(--sumi-nezumi)]">公開後の更新と改善も、必要な範囲で支援します。</p></div>

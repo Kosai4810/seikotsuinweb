@@ -71,7 +71,7 @@ export function Header() {
             href="/#contact-form"
             className="hidden lg:inline-flex items-center px-6 py-3 text-sm bg-[var(--fukai-ai)] text-white tracking-wide hover:bg-[#152d4a] transition-colors duration-300"
           >
-            無料HP診断を申し込む
+            無料HP診断を受ける
           </Link>
 
           {/* Mobile Menu Button */}
@@ -127,7 +127,7 @@ export function Header() {
             className="block w-full text-center py-4 bg-[var(--fukai-ai)] text-white tracking-wide"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            無料HP診断を申し込む
+            無料HP診断を受ける
           </Link>
         </nav>
       </div>

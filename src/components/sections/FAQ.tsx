@@ -32,7 +32,17 @@ const faqs = [
   {
     question: "すでに他社で作ったサイトがあるのですが...",
     answer:
-      "現在のサイトの課題と活かせる内容を整理した上で、リニューアルの方針をご提案します。まずは制作についてご相談ください。",
+      "現在のサイトの課題と活かせる内容を整理した上で、リニューアルの方針をご提案します。無料HP診断では、予約導線、スマートフォン表示、料金・施術内容の伝わり方を中心に改善点を3つ整理します。",
+  },
+  {
+    question: "無料HP診断だけ受けても大丈夫ですか？",
+    answer:
+      "はい、大丈夫です。診断結果だけ受け取りたい段階でも問題ありません。すぐに制作を依頼する前提ではなく、今のホームページや開業準備で優先して直すべき点を整理するための相談としてご利用いただけます。",
+  },
+  {
+    question: "医療広告ガイドラインに配慮した文章にできますか？",
+    answer:
+      "はい。効果を断定する表現や誇大に見えやすい表現を避けながら、院の方針、対応できる相談、来院までの流れが伝わる文章へ整えます。最終的な掲載内容は、必要に応じて専門家や関係機関にも確認いただく前提で進めます。",
   },
   {
     question: "支払い方法は？",
@@ -47,7 +57,7 @@ export function FAQ() {
   return (
     <section id="faq" className="scroll-mt-24 py-16 md:py-20 bg-[var(--kinari)]">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
-        <SectionLabel number="07" label="FAQ" />
+        <SectionLabel number="06" label="FAQ" />
 
         <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-4">
           よくある質問

@@ -13,7 +13,7 @@ export function CTAGroup({ dark = false, compact = false }: CTAGroupProps) {
         href="#contact-form"
         className={`${base} inline-flex items-center justify-center bg-[var(--fukai-ai)] text-white font-medium tracking-wide hover:bg-[#152d4a] transition-colors`}
       >
-        無料HP診断を申し込む
+        無料HP診断を受ける
       </a>
       <a href={siteConfig.emailHref} className={`${base} inline-flex items-center justify-center border tracking-wide transition-colors ${dark ? "border-white/40 text-white hover:bg-white hover:text-[var(--sumi)]" : "border-[var(--sumi)] text-[var(--sumi)] hover:bg-[var(--sumi)] hover:text-white"}`}>メールで相談する</a>
       <a

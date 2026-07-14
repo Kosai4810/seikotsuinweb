@@ -1,6 +1,12 @@
 import Image from "next/image";
 
 const included = ["5ページ程度", "スマホ対応", "問い合わせフォーム", "電話・メール導線", "Googleマップ導線", "基本SEO設定", "公開後1か月サポート"];
+const trustPoints = [
+  "制作担当が直接ヒアリング",
+  "治療院の導線設計に特化",
+  "医療広告ガイドラインに配慮",
+  "開業前・既存HPどちらも対応",
+] as const;
 const slides = [
   ["/generated-hero.jpg", "日本人の施術者が患者の相談を聞く整骨院の様子"],
   ["/clinic-interior.jpg", "自然光の入る落ち着いた整骨院の院内"],
@@ -23,6 +29,9 @@ export function Hero() {
           <p className="hero-reveal hero-reveal-label flex items-center gap-3 text-[11px] md:text-xs tracking-[0.2em] text-white/75 mb-4">
             <span className="w-8 h-px bg-[#b99a62]" />整骨院・接骨院・鍼灸院・整体院専門のWeb制作
           </p>
+          <p className="hero-reveal hero-reveal-label mb-3 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-medium tracking-wide text-white/85 backdrop-blur-sm">
+            整骨院・接骨院・鍼灸院・整体院専門のホームページ制作
+          </p>
           <h1 className="font-serif text-xl md:text-3xl lg:text-4xl tracking-[0.08em] leading-relaxed mb-5">
             <span className="hero-title-mask"><span className="hero-title-line">ホームページ制作から、</span></span>
             <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay"><span className="text-[#d2b47c]">集客導線</span>づくりまで。</span></span>
@@ -42,18 +51,25 @@ export function Hero() {
           <p className="hero-reveal hero-reveal-description text-xs md:text-sm text-white/80 leading-relaxed max-w-3xl mb-4">
             整骨院・接骨院・鍼灸院・整体院専門。まずはホームページ、スマホ対応、問い合わせフォーム、Googleマップ導線、基本SEOまで。必要に応じてLINE・Instagram・広告運用・アクセス解析まで拡張できます。
           </p>
+          <div className="hero-reveal mb-4 grid max-w-4xl grid-cols-1 gap-px bg-white/20 sm:grid-cols-2 lg:grid-cols-4">
+            {trustPoints.map((point) => (
+              <div key={point} className="bg-white/10 px-3 py-2 text-[11px] font-medium text-white/90 backdrop-blur-sm">
+                {point}
+              </div>
+            ))}
+          </div>
           <ul className="hero-reveal hero-reveal-features grid grid-cols-2 md:grid-cols-4 gap-px bg-white/20 max-w-4xl mb-6">
             {included.map((item) => <li key={item} className="bg-[#171512]/75 backdrop-blur-sm px-3 py-2 text-[11px] md:text-xs text-white/90 flex items-center gap-2"><span className="text-[#d2b47c]">✓</span>{item}</li>)}
           </ul>
           <div className="hero-reveal mb-6 max-w-3xl border border-white/20 bg-white/10 px-4 py-3 backdrop-blur-sm">
-            <p className="text-xs font-bold tracking-[0.16em] text-[#e0c28a]">FREE DIAGNOSIS</p>
+            <p className="text-xs font-bold tracking-[0.16em] text-[#e0c28a]">無料HP診断</p>
             <p className="mt-1 text-sm leading-relaxed text-white/90">
-              既存HPがある院は、改善点を無料で3つ診断。HPがない院は、開業・集客に必要な導線を整理します。
+              既存HPがある院は、予約導線・料金表記・スマホ表示の改善点を無料で3つ診断。HPがない院は、開業・集客に必要な導線を整理します。診断結果だけの受け取りでも大丈夫です。
             </p>
           </div>
           <div className="hero-reveal hero-reveal-cta flex flex-col sm:flex-row gap-3">
-            <a href="#contact-form" className="inline-flex justify-center bg-[#a88750] text-white px-6 py-3.5 text-sm font-medium tracking-wide hover:bg-[#947442] transition-colors">無料HP診断を申し込む</a>
-            <a href="#monitor-plan" className="inline-flex justify-center border border-white/50 text-white px-6 py-3.5 text-sm tracking-wide hover:bg-white hover:text-[#171512] transition-colors">モニタープランの内容を見る</a>
+            <a href="#contact-form" className="inline-flex justify-center bg-[#a88750] text-white px-6 py-3.5 text-sm font-medium tracking-wide hover:bg-[#947442] transition-colors">無料HP診断を受ける</a>
+            <a href="#monitor-plan" className="inline-flex justify-center border border-white/50 text-white px-6 py-3.5 text-sm tracking-wide hover:bg-white hover:text-[#171512] transition-colors">制作について相談する</a>
           </div>
         </div>
       </div>

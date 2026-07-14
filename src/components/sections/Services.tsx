@@ -53,11 +53,20 @@ const routeSteps = [
   ["04", "改善する", "アクセスや問い合わせを見ながら、必要な施策を足していく"],
 ] as const;
 
+const seoLinks = [
+  ["整骨院のホームページ制作", "/seikotsuin-homepage"],
+  ["接骨院のホームページ制作", "/sekotsuin-homepage"],
+  ["鍼灸院のホームページ制作", "/shinkyuin-homepage"],
+  ["整体院のホームページ制作", "/seitai-homepage"],
+  ["治療院ホームページ制作の費用", "/seikotsuin-homepage-cost"],
+  ["整骨院の開業準備・Web集客", "/seikotsuin-opening"],
+] as const;
+
 export function Services() {
   return (
     <section id="services" className="scroll-mt-24 py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionLabel number="02" label="Services" />
+        <SectionLabel number="03" label="Services" />
         <div className="max-w-3xl mb-9 md:mb-12">
           <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-4">提供サービス</h2>
           <p className="text-[var(--sumi-nezumi)] leading-relaxed">
@@ -81,9 +90,13 @@ export function Services() {
             </article>
           ))}
         </div>
-        <div className="flex flex-col sm:flex-row gap-3 mb-8">
-          <a href="/seikotsuin-homepage" className="text-sm underline underline-offset-4">整骨院のホームページ制作について詳しく見る</a>
-          <a href="/seikotsuin-opening" className="text-sm underline underline-offset-4">整骨院の開業準備・Web集客について詳しく見る</a>
+        <div className="mb-8 rounded-lg border border-[#d8c8aa] bg-[#fbf8f1] p-5 md:p-6">
+          <h3 className="heading-md mb-4 text-base text-[var(--sumi)]">業態・目的別に詳しく見る</h3>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {seoLinks.map(([label, href]) => (
+              <a key={href} href={href} className="text-sm underline underline-offset-4">{label}</a>
+            ))}
+          </div>
         </div>
         <CTAGroup />
       </div>

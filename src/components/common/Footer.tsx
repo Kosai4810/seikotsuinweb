@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 const footerLinks = [
-  { title: "サービス", links: [{ label: "整骨院のホームページ制作", href: "/seikotsuin-homepage" }, { label: "整骨院の開業準備", href: "/seikotsuin-opening" }, { label: "料金プラン", href: "/#pricing" }, { label: "制作の流れ", href: "/#flow" }] },
+  { title: "サービス", links: [{ label: "整骨院のホームページ制作", href: "/seikotsuin-homepage" }, { label: "接骨院のホームページ制作", href: "/sekotsuin-homepage" }, { label: "鍼灸院のホームページ制作", href: "/shinkyuin-homepage" }, { label: "整体院のホームページ制作", href: "/seitai-homepage" }, { label: "整骨院の開業準備", href: "/seikotsuin-opening" }] },
+  { title: "料金・相談", links: [{ label: "治療院ホームページ制作の費用", href: "/seikotsuin-homepage-cost" }, { label: "料金プラン", href: "/#pricing" }, { label: "無料HP診断", href: "/#contact-form" }, { label: "制作の流れ", href: "/#flow" }] },
   { title: "読みもの・サポート", links: [{ label: "開業・Webの読みもの", href: "/articles" }, { label: "よくある質問", href: "/#faq" }, { label: "お問い合わせ", href: "/#contact" }] },
   { title: "運営情報", links: [{ label: "運営者情報", href: "/company" }, { label: "プライバシーポリシー", href: "/privacy" }] },
 ];

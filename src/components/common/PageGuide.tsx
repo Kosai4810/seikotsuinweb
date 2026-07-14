@@ -1,7 +1,7 @@
 const links = [
   ["サービス", "#services"],
-  ["制作例", "#works"],
   ["料金", "#pricing"],
+  ["無料診断", "#contact-form"],
   ["制作の流れ", "#flow"],
   ["よくある質問", "#faq"],
 ] as const;

@@ -66,7 +66,6 @@ export function Approach() {
             <div className="mb-14 grid gap-3 sm:grid-cols-2">
               {promiseCards.map((promise) => (
                 <div key={promise} className="border-l-2 border-[#a88750] bg-[#f8f4ec] px-5 py-4">
-                  <p className="text-[10px] font-bold tracking-[.18em] text-[#96733d]">DIRECT SUPPORT</p>
                   <p className="mt-2 text-base font-bold leading-relaxed text-[var(--sumi)]">{promise}</p>
                 </div>
               ))}

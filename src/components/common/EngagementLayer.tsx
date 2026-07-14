@@ -58,7 +58,7 @@ export function EngagementLayer() {
         <span className="inline-flex items-baseline rounded-full bg-[#a88750] px-3 py-1 text-[11px] font-bold tracking-wide text-white">先着<strong className="mx-1 font-serif text-2xl leading-none tracking-tight">3</strong>院限定</span>
         <p className="mt-3 text-[11px] tracking-wide text-[#776a57]">通常 <span className="line-through decoration-[#a88750] decoration-2">128,000円〜</span></p><h2 className="mt-1 pr-8 text-xl font-bold leading-snug tracking-tight text-[#211d18]">Web導線づくりを、<br /><span className="text-[#806334]">98,000円から。</span></h2>
         <ul className="mt-3 space-y-1.5 border-y border-[#dfd3bd] py-3 text-xs text-[#554b3c]">
-          <li className="flex justify-between gap-3"><span>モニター制作</span><strong>98,000円〜</strong></li>
+          <li className="flex justify-between gap-3"><span>スターター制作</span><strong>98,000円〜</strong></li>
           <li className="flex justify-between gap-3"><span>集客スタート</span><strong>198,000円〜</strong></li>
           <li className="flex justify-between gap-3"><span>開業フルサポート</span><strong>298,000円〜</strong></li>
         </ul>
