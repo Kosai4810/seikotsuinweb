@@ -1,6 +1,6 @@
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
-import { Hero } from "@/components/sections/Hero";
+import { Hero, MobileHeroVisuals } from "@/components/sections/Hero";
 import { WhySpecialized } from "@/components/sections/WhySpecialized";
 import { Flow } from "@/components/sections/Flow";
 import { Pricing } from "@/components/sections/Pricing";
@@ -61,6 +61,7 @@ export default function Home() {
       <main>
         <Hero />
         <PageGuide />
+        <MobileHeroVisuals />
         <ValueComparison />
         <Pricing />
         <Services />
