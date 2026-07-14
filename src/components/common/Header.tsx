@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navItems = [
-  { label: "TOP", href: "/" },
+  { label: "トップ", href: "/" },
   { label: "HP制作", href: "/seikotsuin-homepage" },
   { label: "開業準備", href: "/seikotsuin-opening" },
   { label: "読みもの", href: "/articles" },

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: { default: siteConfig.title, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
-  keywords: ["整骨院 ホームページ制作", "接骨院 ホームページ制作", "鍼灸院 ホームページ制作", "整体院 ホームページ制作", "整骨院 開業準備", "整骨院 Web制作", "治療院 ホームページ制作 費用"],
+  keywords: ["整骨院web制作", "整骨院 ホームページ制作", "整骨院開業のしかた", "整骨院 集客の仕方", "接骨院 ホームページ制作", "鍼灸院 ホームページ制作", "整体院 ホームページ制作", "整骨院 開業準備", "整骨院 Web制作", "治療院 ホームページ制作 費用"],
   alternates: { canonical: "/" },
   openGraph: {
     title: siteConfig.title,

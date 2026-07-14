@@ -41,7 +41,7 @@ export function Contact() {
     <section id="contact" className="py-16 md:py-20 bg-[var(--sumi)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="col-span-1 lg:col-span-5 min-w-0">
-          <SectionLabel number="07" label="Contact" tone="light" />
+          <SectionLabel number="07" label="お問い合わせ" tone="light" />
           <h2 className="heading-lg text-2xl md:text-3xl text-white mb-6">先着3院のスターター制作と、無料HP診断を受付中です。</h2>
           <p className="text-white/70 leading-loose mb-10">
             既存HPがある院は、予約導線・料金表記・スマホ表示を中心に改善点を3つ整理します。HPがない院は、開業・集客に必要な導線から一緒に整理します。診断結果だけ受け取りたい場合も歓迎です。

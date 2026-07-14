@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 const strengths = [
@@ -20,9 +19,8 @@ export function WhySpecialized() {
   return (
     <section id="about" className="relative overflow-hidden bg-[#eee8dc] py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionLabel number="04" label="Why Specialized" />
-        <div className="grid items-start gap-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-14">
-          <div>
+        <SectionLabel number="04" label="専門性" />
+        <div className="max-w-5xl">
             <h2 className="heading-lg max-w-3xl text-2xl text-[var(--sumi)] md:text-3xl">
               整骨院・接骨院・鍼灸院・整体院に特化しているから、<br className="hidden sm:block" />院ごとの強みと患者さんの導線を設計できます。
             </h2>
@@ -45,12 +43,6 @@ export function WhySpecialized() {
                 </article>
               ))}
             </div>
-          </div>
-          <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              <Image src="/generated-reception.jpg" alt="自然光が入る整骨院の受付と待合空間" fill sizes="(min-width:1024px) 520px, 100vw" className="object-cover" />
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -32,7 +32,7 @@ export function CommonProblems() {
         <div className="grid grid-cols-12 gap-8">
           {/* Left side - Section header */}
           <div className="col-span-12 lg:col-span-4">
-            <SectionLabel number="02" label="Common Problems" />
+            <SectionLabel number="02" label="よくある課題" />
 
             <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-6 sticky top-32">
               よくある

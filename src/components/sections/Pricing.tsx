@@ -43,14 +43,13 @@ export function Pricing() {
   return (
     <section id="pricing" className="scroll-mt-24 py-16 md:py-20 bg-[var(--kinari)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionLabel number="02" label="Pricing" />
+        <SectionLabel number="02" label="料金" />
         <h2 className="heading-lg text-2xl md:text-3xl mb-4">治療院のWeb導線スターターパックを、<br />98,000円から。</h2>
         <p className="text-[var(--sumi-nezumi)] mb-8 md:mb-10">ホームページ単体ではなく、患者さんが見つけて、比較して、相談するまでの導線を必要な範囲で整えます。</p>
         <div className="mb-10 grid grid-cols-1 gap-px border border-[#d8c8aa] bg-[#d8c8aa] md:grid-cols-3">
           {priceReasons.map(([title, description]) => (
             <article key={title} className="bg-[#fbf7ef] p-5 md:p-6">
-              <p className="text-[10px] font-bold tracking-[.18em] text-[#96733d]">WHY 98,000</p>
-              <h3 className="mt-2 text-base font-bold leading-snug text-[var(--sumi)]">{title}</h3>
+              <h3 className="text-base font-bold leading-snug text-[var(--sumi)]">{title}</h3>
               <p className="mt-3 text-xs leading-6 text-[var(--sumi-nezumi)]">{description}</p>
             </article>
           ))}

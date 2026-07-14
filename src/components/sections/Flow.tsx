@@ -44,18 +44,18 @@ export function Flow() {
   return (
     <section id="flow" className="scroll-mt-24 py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionLabel number="05" label="Process" />
+        <SectionLabel number="05" label="制作の流れ" />
 
         <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-8">
           制作の流れ
         </h2>
 
         <div>
-          <div className="space-y-2 lg:space-y-0 border-y border-[var(--usuzumi-line)]">
+          <div className="border-y border-[var(--usuzumi-line)]">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="grid gap-3 py-5 lg:grid-cols-[minmax(280px,0.9fr)_1.6fr] lg:items-center lg:gap-8 lg:py-6 border-b last:border-b-0 border-[var(--usuzumi-line)]"
+                className="grid gap-3 border-b border-[var(--usuzumi-line)] py-6 last:border-b-0 lg:grid-cols-[minmax(280px,0.9fr)_1.6fr] lg:items-center lg:gap-8 lg:py-7"
               >
                 <div className="flex items-center gap-3">
                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--fukai-ai)] font-inter text-xs text-white">{step.number}</span>

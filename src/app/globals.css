@@ -230,6 +230,41 @@ body {
   36%, 100% { opacity: 0; transform: scale(1.07) translate3d(-8px, -3px, 0); }
 }
 
+.phone-site-track {
+  min-height: 560px;
+  animation: phoneSiteScroll 10s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  will-change: transform;
+}
+
+@keyframes phoneSiteScroll {
+  0%, 10% { transform: translateY(0); }
+  31%, 43% { transform: translateY(-138px); }
+  66%, 82% { transform: translateY(-270px); }
+  100% { transform: translateY(0); }
+}
+
+.phone-site-cta {
+  animation: phoneCtaPulse 2.4s ease-in-out infinite;
+}
+
+.phone-site-card {
+  animation: phoneCardFloat 4.8s ease-in-out infinite;
+}
+
+.phone-site-card:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+@keyframes phoneCtaPulse {
+  0%, 100% { transform: translateY(0); box-shadow: 0 0 0 rgba(30, 58, 95, 0); }
+  50% { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(30, 58, 95, 0.22); }
+}
+
+@keyframes phoneCardFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
 .hero-title-mask {
   display: block;
   overflow: hidden;
@@ -272,6 +307,9 @@ body {
   .hero-cinema-frame:first-child { opacity: 1; }
   .hero-title-line,
   .hero-reveal { animation: none; opacity: 1; transform: none; clip-path: none; }
+  .phone-site-track { animation: none; transform: translateY(-92px); }
+  .phone-site-cta,
+  .phone-site-card { animation: none; }
   .pricing-popup { transition-duration: 0.01ms; }
   .campaign-badge::after { animation: none; left: 135%; }
 }

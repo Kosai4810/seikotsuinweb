@@ -20,9 +20,9 @@ const faqs = [
       "撮影の有無と場所に応じて個別にお見積りします。関西圏外の撮影は、旅費や現地カメラマンの手配を含めてご相談ください。",
   },
   {
-    question: "公開後の更新は自分でできますか？",
+    question: "公開後の更新はどうなりますか？",
     answer:
-      "はい、簡単な更新はご自身で行えるように設計します。また、更新方法のレクチャーも行います。「やっぱり難しい」という場合は、保守プランの中で更新代行も承っています。",
+      "公開後の文章修正、写真差し替え、営業時間変更、お知らせ追加などは、基本的にこちらで対応します。院長様が管理画面から直接更新する前提ではなく、必要な変更を相談いただき、内容に応じて月額サポートまたは都度お見積りで反映します。",
   },
   {
     question: "制作にどのくらいの時間がかかりますか？",
@@ -57,7 +57,7 @@ export function FAQ() {
   return (
     <section id="faq" className="scroll-mt-24 py-16 md:py-20 bg-[var(--kinari)]">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
-        <SectionLabel number="06" label="FAQ" />
+        <SectionLabel number="06" label="よくある質問" />
 
         <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-4">
           よくある質問

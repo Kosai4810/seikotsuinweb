@@ -36,7 +36,7 @@ export function Approach() {
     <section id="approach" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-end mb-12">
-          <SectionLabel number="03" label="Our Approach" align="right" />
+          <SectionLabel number="03" label="制作姿勢" align="right" />
         </div>
 
         <div className="grid grid-cols-12 gap-8 lg:gap-16">

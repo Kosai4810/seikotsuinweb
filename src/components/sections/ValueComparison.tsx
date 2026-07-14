@@ -1,3 +1,5 @@
+import { SectionLabel } from "@/components/ui/SectionLabel";
+
 const values = [
   ["01", "ホームページ制作", "院の強み、施術内容、料金、アクセス、予約方法を患者目線で整理します。"],
   ["02", "予約・問い合わせ導線", "電話、メール、問い合わせフォームへ迷わず進める構成にします。"],
@@ -11,6 +13,7 @@ export function ValueComparison() {
   return <section className="py-14 md:py-18 bg-[#eee8dc]">
     <div className="max-w-7xl mx-auto px-6 lg:px-12">
       <div className="max-w-3xl mb-8">
+        <SectionLabel number="01" label="内容" />
         <h2 className="heading-lg text-2xl md:text-4xl mb-3">低価格でも、必要なものは全て網羅。</h2>
         <p className="text-sm md:text-base text-[var(--sumi-nezumi)] leading-7">ホームページだけではありません。患者さんが院を知り、安心し、問い合わせるまでに必要なWeb環境を、整骨院・接骨院・鍼灸院・整体院に特化した視点でまとめて整えます。</p>
       </div>
