@@ -89,9 +89,9 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mb-8 grid gap-px border border-[#d8c8aa] bg-[#d8c8aa] md:grid-cols-2 xl:grid-cols-3">
+        <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
-            <article key={service.number} className="group bg-white p-5 transition-colors hover:bg-[#fbf8f1] md:p-6">
+            <article key={service.number} className="group border-2 border-[#d8c8aa] bg-white p-5 transition-colors hover:bg-[#fbf8f1] md:p-6">
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div className="min-w-0">
                   <div className="mb-3 flex items-center gap-3">

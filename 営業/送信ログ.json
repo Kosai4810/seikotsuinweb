@@ -1,0 +1,56 @@
+[
+  {
+    "timestamp": "2026-07-16T01:00:53.306392",
+    "clinic": "さくらリバース治療院 藤が丘",
+    "status": "失敗",
+    "message": "エラー: Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"input[type=\\\"submit\\\"]\")\n    - locator resolved to <input disabled id=\"formbtn\" type=\"submit\" value=\"この内容で送信する\" class=\"wpcf7-form-control wpcf7-submit has-spinner\"/>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    57 × waiting for element to be visible, enabled and stable\n       - element is not enabled\n     - retrying click action\n       - waiting 500ms\n"
+  },
+  {
+    "timestamp": "2026-07-16T01:01:28.244690",
+    "clinic": "名古屋ニコリ接骨院 名駅院",
+    "status": "失敗",
+    "message": "フォームなし"
+  },
+  {
+    "timestamp": "2026-07-16T01:01:40.383998",
+    "clinic": "アイズSPORTS整骨院 姪浜院",
+    "status": "失敗",
+    "message": "フォームなし"
+  },
+  {
+    "timestamp": "2026-07-16T01:01:50.691111",
+    "clinic": "F-nine伊都整骨院・鍼灸院",
+    "status": "失敗",
+    "message": "メッセージ欄なし"
+  },
+  {
+    "timestamp": "2026-07-16T01:02:34.257877",
+    "clinic": "RelaFit整骨院",
+    "status": "失敗",
+    "message": "フォームなし"
+  },
+  {
+    "timestamp": "2026-07-16T01:03:01.286591",
+    "clinic": "香里園たいじゅ整骨院",
+    "status": "失敗",
+    "message": "メッセージ欄なし"
+  },
+  {
+    "timestamp": "2026-07-16T01:03:47.807934",
+    "clinic": "NOX整骨院",
+    "status": "失敗",
+    "message": "フォームなし"
+  },
+  {
+    "timestamp": "2026-07-16T01:04:08.894412",
+    "clinic": "みゆき整骨院",
+    "status": "失敗",
+    "message": "フォームなし"
+  },
+  {
+    "timestamp": "2026-07-16T01:04:30.511180",
+    "clinic": "ヒロ整骨院",
+    "status": "失敗",
+    "message": "フォームなし"
+  }
+]

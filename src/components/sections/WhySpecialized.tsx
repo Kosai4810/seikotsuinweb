@@ -20,9 +20,9 @@ export function WhySpecialized() {
     <section id="about" className="relative overflow-hidden bg-[#eee8dc] py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionLabel number="04" label="専門性" />
-        <div className="max-w-5xl">
-            <h2 className="heading-lg max-w-3xl text-2xl text-[var(--sumi)] md:text-3xl">
-              整骨院・接骨院・鍼灸院・整体院に特化しているから、<br className="hidden sm:block" />院ごとの強みと患者さんの導線を設計できます。
+        <div className="max-w-6xl">
+            <h2 className="heading-lg max-w-none text-[clamp(1.25rem,2.25vw,1.9rem)] text-[var(--sumi)] md:whitespace-nowrap">
+              整骨院・接骨院・鍼灸院・整体院に特化しているから、院ごとの強みと患者さんの導線を設計できます。
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--sumi-nezumi)] md:text-base">
               汎用テンプレートに当てはめず、院の内側にある価値と、患者さんが来院までに必要とする情報を一つの流れとして組み立てます。既存サイトの改善、開業前の情報整理、GoogleマップやLINEへの導線まで、現在地に合わせて提案します。
