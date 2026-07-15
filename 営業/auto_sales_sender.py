@@ -232,6 +232,24 @@ def detect_form_fields(page):
     return fields
 
 
+def find_contact_links(page):
+    """ページ内の問い合わせリンクを探す"""
+    contact_links = []
+    links = page.query_selector_all('a')
+    for link in links:
+        try:
+            href = link.get_attribute('href')
+            text = link.inner_text() or ''
+            if href and any(keyword in text for keyword in ['問い合わせ', 'お問い合わせ', 'contact', 'CONTACT', 'メール', 'ご相談']):
+                if href.startswith('http') or href.startswith('/'):
+                    contact_links.append(href)
+            elif href and any(keyword in href.lower() for keyword in ['contact', 'inquiry', 'form', 'mail', 'otoiawase']):
+                contact_links.append(href)
+        except:
+            continue
+    return contact_links
+
+
 def send_to_form(clinic):
     """フォームに送信"""
     SCREENSHOT_DIR.mkdir(exist_ok=True)
@@ -249,7 +267,7 @@ def send_to_form(clinic):
             # 様々な問い合わせページURLパターンを試す
             base_url = url.rstrip('/')
             # ドメインのルートを取得
-            from urllib.parse import urlparse
+            from urllib.parse import urlparse, urljoin
             parsed = urlparse(url)
             root_url = f"{parsed.scheme}://{parsed.netloc}"
 
@@ -263,8 +281,20 @@ def send_to_form(clinic):
                 f"{root_url}/form/",
                 f"{root_url}/mail/",
                 f"{root_url}/otoiawase/",
-                f"{root_url}/#contact",
             ]
+
+            # まずトップページを開いて問い合わせリンクを探す
+            try:
+                page.goto(root_url, timeout=30000)
+                page.wait_for_load_state('networkidle', timeout=10000)
+                found_links = find_contact_links(page)
+                for link in found_links:
+                    full_url = urljoin(root_url, link)
+                    if full_url not in contact_urls:
+                        contact_urls.insert(0, full_url)
+            except:
+                pass
+
             # 重複を除去
             contact_urls = list(dict.fromkeys(contact_urls))
 
@@ -421,13 +451,37 @@ def run_once():
     return True
 
 
+def git_push():
+    """GitHubに進捗をプッシュ"""
+    import subprocess
+    try:
+        repo_dir = BASE_DIR.parent
+        subprocess.run(['git', 'add', '-A'], cwd=repo_dir, capture_output=True)
+        subprocess.run([
+            'git', 'commit', '-m', f'営業進捗更新 {datetime.now().strftime("%Y-%m-%d %H:%M")}'
+        ], cwd=repo_dir, capture_output=True)
+        result = subprocess.run(['git', 'push', 'origin', 'main'], cwd=repo_dir, capture_output=True, text=True)
+        if result.returncode == 0:
+            logger.info("GitHubにプッシュ完了")
+        else:
+            logger.warning(f"GitHubプッシュ失敗: {result.stderr}")
+    except Exception as e:
+        logger.error(f"Git操作エラー: {e}")
+
+
 def run_daemon():
     """デーモンモードで実行（継続的に送信）"""
     logger.info("自動送信デーモン開始")
+    last_push = datetime.now()
 
     while True:
         try:
             result = run_once()
+
+            # 30分ごとにGitHubにプッシュ
+            if (datetime.now() - last_push).total_seconds() > 1800:
+                git_push()
+                last_push = datetime.now()
 
             if result:
                 # ランダム間隔で待機
@@ -437,10 +491,12 @@ def run_daemon():
             else:
                 # 送信できない場合は1時間待機
                 logger.info("1時間後に再試行")
+                git_push()  # プッシュしてから待機
                 time.sleep(3600)
 
         except KeyboardInterrupt:
             logger.info("デーモン停止")
+            git_push()
             break
         except Exception as e:
             logger.error(f"エラー: {e}")
