@@ -16,12 +16,12 @@ const phoneFeatures = ["症状別ページ", "料金表", "予約導線", "Googl
 
 function PhonePreview({ className = "" }: { className?: string }) {
   return (
-    <div className={`[container-type:inline-size] rounded-[1.7rem] border border-[#1d2430] bg-[#10151f] p-1 shadow-[0_28px_80px_rgba(16,24,40,0.24)] ${className}`}>
-      <div className="relative overflow-hidden rounded-[1.35rem] bg-white">
-        <div className="absolute left-1/2 top-2 z-20 h-1 w-10 -translate-x-1/2 rounded-full bg-[#10151f]/75" />
+    <div className={`[container-type:inline-size] rounded-[clamp(1rem,13cqw,1.7rem)] border border-[#1d2430] bg-[#10151f] p-[clamp(2px,1.8cqw,4px)] shadow-[0_28px_80px_rgba(16,24,40,0.24)] ${className}`}>
+      <div className="relative overflow-hidden rounded-[clamp(0.8rem,10cqw,1.35rem)] bg-white">
+        <div className="absolute left-1/2 top-[4cqw] z-20 h-[1.8cqw] w-[18cqw] -translate-x-1/2 rounded-full bg-[#10151f]/75" />
         <div className="aspect-[9/16] overflow-hidden bg-white">
           <div className="phone-site-track">
-            <div className="relative h-[31%] min-h-28 overflow-hidden bg-[#f4efe5]">
+            <div className="relative h-[76cqw] overflow-hidden bg-[#f4efe5]">
               <Image src="/generated-reception.jpg" alt="" fill sizes="220px" className="object-cover opacity-85" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-transparent" />
               <div className="absolute inset-x-[7%] bottom-[8%]">
@@ -30,15 +30,15 @@ function PhonePreview({ className = "" }: { className?: string }) {
               </div>
             </div>
             <div className="space-y-[clamp(0.38rem,3cqw,0.75rem)] p-[7%]">
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-[4cqw]">
                 {phoneFeatures.map((feature) => (
-                  <div key={feature} className="border border-[#e1d7c5] bg-[#fbf8f1] px-2 py-2 text-[clamp(7px,4.7cqw,10px)] font-bold leading-snug text-[#594a35]">{feature}</div>
+                  <div key={feature} className="border border-[#e1d7c5] bg-[#fbf8f1] px-[4cqw] py-[3.6cqw] text-[clamp(7px,4.7cqw,10px)] font-bold leading-snug text-[#594a35]">{feature}</div>
                 ))}
               </div>
               <div className="phone-site-cta rounded-sm bg-[#1e3a5f] px-3 py-[6%] text-center text-[clamp(8px,5.2cqw,12px)] font-bold tracking-wide text-white">Web予約・LINE相談</div>
-              <div className="grid gap-2">
-                <div className="phone-site-card min-h-12 border-l-2 border-[#a88750] bg-white px-3 py-2 shadow-sm"><p className="text-[clamp(7px,4.7cqw,10px)] font-bold text-[var(--sumi)]">施術メニュー</p><p className="mt-1 text-[clamp(6px,4.2cqw,9px)] leading-[1.55] text-[var(--sumi-nezumi)]">症状・料金・初回の流れを整理</p></div>
-                <div className="phone-site-card min-h-12 border-l-2 border-[#1e3a5f] bg-white px-3 py-2 shadow-sm"><p className="text-[clamp(7px,4.7cqw,10px)] font-bold text-[var(--sumi)]">アクセス</p><p className="mt-1 text-[clamp(6px,4.2cqw,9px)] leading-[1.55] text-[var(--sumi-nezumi)]">Googleマップと電話へすぐ誘導</p></div>
+              <div className="grid gap-[4cqw]">
+                <div className="phone-site-card border-l-2 border-[#a88750] bg-white px-[5cqw] py-[4cqw] shadow-sm"><p className="text-[clamp(7px,4.7cqw,10px)] font-bold text-[var(--sumi)]">施術メニュー</p><p className="mt-1 text-[clamp(6px,4.2cqw,9px)] leading-[1.55] text-[var(--sumi-nezumi)]">症状・料金・初回の流れを整理</p></div>
+                <div className="phone-site-card border-l-2 border-[#1e3a5f] bg-white px-[5cqw] py-[4cqw] shadow-sm"><p className="text-[clamp(7px,4.7cqw,10px)] font-bold text-[var(--sumi)]">アクセス</p><p className="mt-1 text-[clamp(6px,4.2cqw,9px)] leading-[1.55] text-[var(--sumi-nezumi)]">Googleマップと電話へすぐ誘導</p></div>
               </div>
             </div>
             <div className="bg-[#f7f5f0] p-[7%]">
@@ -74,9 +74,9 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-white/68 via-transparent to-white/12" />
           <div className="absolute inset-y-0 right-0 hidden w-[34%] bg-gradient-to-l from-[#fbf8f1]/60 via-[#fbf8f1]/24 to-transparent lg:block" />
 
-          <PhonePreview className="hero-reveal absolute bottom-[clamp(1.25rem,2.6vw,2rem)] right-[clamp(1.25rem,3.2vw,3rem)] z-20 hidden w-[clamp(170px,18vw,230px)] rotate-[2.5deg] lg:block" />
+          <PhonePreview className="hero-reveal absolute bottom-[clamp(1rem,2.6vw,2rem)] right-[clamp(1rem,3.2vw,3rem)] z-20 hidden w-[clamp(120px,18vw,230px)] rotate-[2.5deg] lg:block" />
 
-          <div className="relative z-10 min-h-[clamp(620px,72svh,780px)] px-5 py-9 md:px-10 md:py-12 lg:flex lg:items-center lg:px-[clamp(2.5rem,4vw,3.5rem)] lg:py-[clamp(3rem,5vw,4rem)] lg:pr-[clamp(13rem,29vw,23rem)]">
+          <div className="relative z-10 min-h-[clamp(560px,72svh,780px)] px-5 py-9 md:px-10 md:py-12 lg:flex lg:items-center lg:px-[clamp(2.5rem,4vw,3.5rem)] lg:py-[clamp(3rem,5vw,4rem)] lg:pr-[clamp(9rem,29vw,23rem)]">
             <div className="w-full max-w-4xl">
               <p className="hero-reveal hero-reveal-label flex items-center gap-3 text-[11px] tracking-[0.2em] text-[#806334] md:text-xs">
                 <span className="h-px w-8 bg-[#b99a62]" />整骨院・接骨院・鍼灸院・整体院専門のWeb伴走
