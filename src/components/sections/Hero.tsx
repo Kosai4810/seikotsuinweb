@@ -72,11 +72,11 @@ export function Hero() {
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-white/12" />
           <div className="absolute inset-0 bg-gradient-to-t from-white/68 via-transparent to-white/12" />
-          <div className="absolute inset-y-0 right-0 hidden w-[34%] bg-gradient-to-l from-[#fbf8f1]/60 via-[#fbf8f1]/24 to-transparent lg:block" />
+          <div className="absolute inset-y-0 right-0 hidden w-[34%] bg-gradient-to-l from-[#fbf8f1]/60 via-[#fbf8f1]/24 to-transparent md:block" />
 
-          <PhonePreview className="hero-reveal absolute bottom-[clamp(1rem,2.6vw,2rem)] right-[clamp(1rem,3.2vw,3rem)] z-20 hidden w-[clamp(120px,18vw,230px)] rotate-[2.5deg] lg:block" />
+          <PhonePreview className="hero-reveal absolute bottom-[clamp(0.7rem,2.1vw,2rem)] right-[clamp(0.7rem,2.8vw,3rem)] z-20 hidden w-[clamp(96px,15vw,230px)] rotate-[2.5deg] md:block" />
 
-          <div className="relative z-10 min-h-[clamp(560px,72svh,780px)] px-5 py-9 md:px-10 md:py-12 lg:flex lg:items-center lg:px-[clamp(2.5rem,4vw,3.5rem)] lg:py-[clamp(3rem,5vw,4rem)] lg:pr-[clamp(9rem,29vw,23rem)]">
+          <div className="relative z-10 min-h-[clamp(520px,68svh,780px)] px-5 py-9 md:flex md:items-center md:px-[clamp(1.6rem,3.6vw,3.5rem)] md:py-[clamp(2.3rem,4.5vw,4rem)] md:pr-[clamp(8rem,25vw,23rem)]">
             <div className="w-full max-w-4xl">
               <p className="hero-reveal hero-reveal-label flex items-center gap-3 text-[11px] tracking-[0.2em] text-[#806334] md:text-xs">
                 <span className="h-px w-8 bg-[#b99a62]" />整骨院・接骨院・鍼灸院・整体院専門のWeb伴走
@@ -84,8 +84,8 @@ export function Hero() {
               <p className="hero-reveal hero-reveal-label mt-4 inline-flex border border-[#d8c8aa] bg-white/80 px-3 py-1 text-[11px] font-bold tracking-wide text-[#6f5528] backdrop-blur">
                 院長の「施術以外」を、Webからまるっと支えます
               </p>
-              <h1 className="mt-5 font-serif text-3xl leading-[1.55] tracking-[0.06em] text-[var(--sumi)] md:text-5xl lg:text-[clamp(2.45rem,4.35vw,3.45rem)]">
-                <span className="hero-title-mask"><span className="hero-title-line lg:whitespace-nowrap">治療院「専門」パートナー。</span></span>
+              <h1 className="mt-5 font-serif text-3xl leading-[1.55] tracking-[0.06em] text-[var(--sumi)] md:text-[clamp(2.1rem,4.35vw,3.45rem)]">
+                <span className="hero-title-mask"><span className="hero-title-line md:whitespace-nowrap">治療院「専門」パートナー。</span></span>
                 <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">HPも、MEOも、LINEも、</span></span>
                 <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">まるっと伴走します。</span></span>
               </h1>
@@ -103,7 +103,7 @@ export function Hero() {
               <p className="hero-reveal hero-reveal-description mb-4 mt-5 max-w-3xl text-sm leading-relaxed text-[var(--sumi-nezumi)]">
                 開業前の情報整理、既存ホームページの乗り換え、Googleマップからの問い合わせ改善まで。院長が施術に集中できるよう、Web集客の土台をまとめて整えます。
               </p>
-              <div className="hero-reveal mb-4 grid max-w-4xl grid-cols-1 gap-px bg-[#d8c8aa] sm:grid-cols-2 lg:grid-cols-4">
+              <div className="hero-reveal mb-4 grid max-w-4xl grid-cols-1 gap-px bg-[#d8c8aa] sm:grid-cols-2 md:grid-cols-4">
                 {trustPoints.map((point) => (
                   <div key={point} className="bg-white/88 px-3 py-2 text-[11px] font-bold text-[#594a35] backdrop-blur">
                     {point}
@@ -133,20 +133,23 @@ export function Hero() {
 
 export function MobileHeroVisuals() {
   return (
-    <section className="bg-white px-6 pb-12 pt-2 lg:hidden">
-      <div className="relative mx-auto max-w-sm pb-10">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[#d8c8aa] bg-[#eee8dc] shadow-[0_18px_60px_rgba(83,63,30,0.12)]">
-          {slides.map(([src, alt], index) => (
-            <Image key={src} src={src} alt={index === 0 ? alt : ""} aria-hidden={index > 0} fill sizes="(max-width: 1023px) 100vw" className={`hero-cinema-frame object-cover ${index === 0 ? "object-[62%_center]" : "object-center"}`} />
-          ))}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/86 via-white/42 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/10" />
-          <div className="absolute left-0 top-0 max-w-[64%] p-4">
-            <p className="text-[12px] font-bold tracking-[.18em] text-[#806334]">Web導線イメージ</p>
-            <p className="mt-2 font-serif text-xl leading-relaxed text-[var(--sumi)]">患者さんが迷わず相談できる流れへ。</p>
+    <section className="bg-white px-6 pb-10 pt-2 md:hidden">
+      <div className="mx-auto grid max-w-sm grid-cols-[0.82fr_1fr] items-end gap-4">
+        <PhonePreview className="w-full rotate-[-1.5deg]" />
+        <div className="min-w-0">
+          <p className="font-serif text-xl leading-relaxed tracking-[0.04em] text-[var(--sumi)]">
+            患者さんが迷わず<br />貴院を選択できる流れに。
+          </p>
+          <div className="relative mt-4 aspect-[4/5] overflow-hidden rounded-xl border border-[#d8c8aa] bg-[#f7f5f0] shadow-[0_16px_45px_rgba(83,63,30,0.12)]">
+            <Image
+              src="/mobile-therapist-smile.png"
+              alt="にっこり笑う整体師の男性"
+              fill
+              sizes="(max-width: 1023px) 45vw"
+              className="object-cover object-[52%_center]"
+            />
           </div>
         </div>
-        <PhonePreview className="absolute -bottom-2 right-3 w-[46%] min-w-40 max-w-52 rotate-[2deg]" />
       </div>
     </section>
   );
