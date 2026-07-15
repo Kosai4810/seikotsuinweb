@@ -88,5 +88,12 @@
     "clinic": "with.鍼灸整骨院 西明石院",
     "status": "失敗",
     "message": "メッセージ欄なし"
+  },
+  {
+    "timestamp": "2026-07-16T01:19:17.714331",
+    "clinic": "さくらリバース治療院 藤が丘",
+    "method": "問い合わせフォーム",
+    "status": "成功",
+    "url": "https://sakura-r.co.jp/contact-fujigaoka/"
   }
 ]
