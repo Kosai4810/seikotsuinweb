@@ -133,20 +133,30 @@ export function Hero() {
 
 export function MobileHeroVisuals() {
   return (
-    <section className="bg-white px-6 pb-10 pt-2 md:hidden">
-      <div className="mx-auto grid max-w-sm grid-cols-[0.82fr_1fr] items-end gap-4">
-        <PhonePreview className="w-full rotate-[-1.5deg]" />
-        <div className="min-w-0">
-          <p className="font-serif text-xl leading-relaxed tracking-[0.04em] text-[var(--sumi)]">
-            患者さんが迷わず<br />貴院を選択できる流れに。
-          </p>
-          <div className="relative mt-4 aspect-[4/5] overflow-hidden rounded-xl border border-[#d8c8aa] bg-[#f7f5f0] shadow-[0_16px_45px_rgba(83,63,30,0.12)]">
+    <section className="relative overflow-hidden px-6 pb-10 pt-5 md:hidden">
+      <Image
+        src="/generated-hero.jpg"
+        alt=""
+        fill
+        aria-hidden
+        sizes="100vw"
+        className="object-cover object-[58%_center] opacity-30"
+      />
+      <div className="absolute inset-0 bg-white/68" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/74 via-white/48 to-white/78" />
+      <div className="relative mx-auto max-w-sm">
+        <p className="w-full font-serif text-[clamp(1.35rem,7vw,1.9rem)] leading-relaxed tracking-[0.04em] text-[var(--sumi)] drop-shadow-[0_1px_12px_rgba(255,255,255,0.95)]">
+          患者さんが迷わず貴院を選択できる流れに。
+        </p>
+        <div className="mt-5 grid grid-cols-[0.8fr_1fr] items-end gap-4">
+          <PhonePreview className="w-full rotate-[-1.5deg]" />
+          <div className="relative aspect-[3/4] min-w-0 overflow-hidden rounded-[1.4rem] shadow-[0_18px_55px_rgba(83,63,30,0.18)]">
             <Image
               src="/mobile-therapist-smile.png"
               alt="にっこり笑う整体師の男性"
               fill
               sizes="(max-width: 1023px) 45vw"
-              className="object-cover object-[52%_center]"
+              className="scale-110 object-cover object-[50%_18%]"
             />
           </div>
         </div>
