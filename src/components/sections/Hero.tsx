@@ -59,8 +59,8 @@ function PhonePreview({ className = "" }: { className?: string }) {
 
 function HeroMotionStory() {
   return (
-    <div className="hero-reveal hero-reveal-gallery relative mt-6 max-w-4xl overflow-hidden border border-[#d8c8aa] bg-white/80 p-2 shadow-[0_24px_72px_rgba(83,63,30,0.13)] backdrop-blur">
-      <div className="relative min-h-[clamp(330px,41vw,455px)] overflow-hidden bg-[#f4efe5]">
+    <div className="relative overflow-hidden bg-[#f4efe5]">
+      <div className="relative min-h-[clamp(620px,76svh,760px)] overflow-hidden md:min-h-[clamp(590px,68svh,760px)]">
         {slides.map(([src, alt], index) => (
           <Image
             key={src}
@@ -69,25 +69,46 @@ function HeroMotionStory() {
             aria-hidden={index > 0}
             fill
             sizes="(min-width: 1024px) 820px, 92vw"
-            className="hero-story-frame object-contain"
+            priority={index === 0}
+            className={`hero-story-frame object-cover ${index === 0 ? "object-[56%_center]" : "object-center"}`}
           />
         ))}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_20%,rgba(255,255,255,0.22),transparent_30%),linear-gradient(90deg,rgba(255,255,255,0.94)_0%,rgba(255,255,255,0.70)_36%,rgba(255,255,255,0.08)_74%,rgba(255,255,255,0.34)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#fbf8f1]/96 via-[#fbf8f1]/58 to-transparent" />
-        <div className="relative z-10 flex min-h-[clamp(330px,41vw,455px)] items-end px-[clamp(1rem,3vw,2.2rem)] py-[clamp(1rem,2.8vw,2rem)]">
-          <div className="max-w-2xl border-l border-[#b99a62] bg-white/54 px-[clamp(1rem,2vw,1.45rem)] py-[clamp(0.85rem,1.7vw,1.25rem)] shadow-[0_18px_55px_rgba(83,63,30,0.12)] backdrop-blur-[5px]">
-            <div className="mb-3 flex flex-wrap items-center gap-2">
-              <span className="bg-white/86 px-3 py-1 text-[10px] font-bold tracking-[0.16em] text-[#806334] backdrop-blur">Web伴走イメージ</span>
-              <span className="bg-[var(--fukai-ai)]/90 px-3 py-1 text-[10px] font-bold tracking-wide text-white backdrop-blur">HP・MEO・LINEをひとつの流れに</span>
-            </div>
-            <p className="text-[clamp(0.98rem,1.65vw,1.22rem)] leading-[1.9] text-[var(--sumi-nezumi)]">
-              ホームページ制作だけで終わらせず、Googleマップ、公式LINE、Instagram、広告、アクセス改善まで。バラバラに外注するより低コストで、院の世界観もブレません。
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(255,255,255,0.18),transparent_28%),linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.84)_34%,rgba(255,255,255,0.32)_64%,rgba(255,255,255,0.06)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#fbf8f1] via-[#fbf8f1]/74 to-transparent" />
+        <div className="absolute right-[clamp(1rem,3.6vw,3rem)] top-1/2 z-20 hidden w-[clamp(116px,16vw,230px)] -translate-y-[38%] rotate-[2.5deg] md:block">
+          <PhonePreview />
+        </div>
+        <div className="relative z-10 flex min-h-[clamp(560px,72svh,700px)] items-end px-[clamp(1.05rem,4vw,3.5rem)] pb-[clamp(1.15rem,3.4vw,3.2rem)] pt-[clamp(2.4rem,6vw,5.2rem)] md:min-h-[clamp(590px,68svh,760px)] md:items-center md:pr-[clamp(12rem,26vw,24rem)]">
+          <div className="hero-reveal max-w-3xl">
+            <p className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] text-[#806334] md:text-xs">
+              <span className="h-px w-8 bg-[#b99a62]" />整骨院・接骨院・鍼灸院・整体院専門
             </p>
-            <div className="mt-5 flex flex-wrap items-end gap-x-5 gap-y-3">
-              <span className="inline-flex items-baseline bg-[#a88750] px-3 py-1 text-sm font-medium tracking-wide text-white md:text-base">先着<strong className="mx-1 font-serif text-3xl leading-none tracking-tight md:text-4xl">3</strong>院限定</span>
-              <div>
-                <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-[#a88750] decoration-2">128,000円（税込）〜</span></p>
-                <p className="font-serif leading-none"><strong className="text-[clamp(3.1rem,5.7vw,4.5rem)] font-medium tracking-tight text-[#806334]">98,000</strong><span className="ml-1 text-xl md:text-2xl">円（税込）〜</span></p>
+            <p className="mt-4 inline-flex border border-[#d8c8aa] bg-white/86 px-3 py-1 text-[11px] font-bold tracking-wide text-[#6f5528] shadow-sm backdrop-blur">
+              院長の「施術以外」を、Webからまるっと支えます
+            </p>
+            <h1 className="mt-5 font-serif text-[clamp(2rem,8.4vw,2.7rem)] leading-[1.34] tracking-[0.035em] text-[var(--sumi)] md:text-[clamp(2.55rem,4.6vw,4rem)] md:leading-[1.38]">
+              <span className="hero-title-mask"><span className="hero-title-line md:whitespace-nowrap">治療院専門のWebパートナー。</span></span>
+              <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">HP・MEO・LINEを、</span></span>
+              <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">まるっと伴走。</span></span>
+            </h1>
+            <div className="mt-5 max-w-2xl border-l border-[#b99a62] bg-white/64 px-[clamp(0.9rem,2vw,1.45rem)] py-[clamp(0.78rem,1.7vw,1.25rem)] shadow-[0_18px_55px_rgba(83,63,30,0.12)] backdrop-blur-[5px]">
+              <div className="mb-3 flex flex-wrap items-center gap-2">
+                <span className="bg-white/88 px-3 py-1 text-[10px] font-bold tracking-[0.16em] text-[#806334] backdrop-blur">Web伴走イメージ</span>
+                <span className="bg-[var(--fukai-ai)]/90 px-3 py-1 text-[10px] font-bold tracking-wide text-white backdrop-blur">検索→比較→相談まで設計</span>
+              </div>
+              <p className="text-[clamp(0.86rem,1.55vw,1.12rem)] leading-[1.75] text-[var(--sumi-nezumi)] md:leading-[1.9]">
+                ホームページ制作だけで終わらせず、Googleマップ、公式LINE、Instagram、広告、アクセス改善まで。バラバラに外注するより低コストで、院の世界観もブレません。
+              </p>
+              <div className="mt-4 flex flex-wrap items-end gap-x-5 gap-y-3 md:mt-5">
+                <span className="inline-flex items-baseline bg-[#a88750] px-3 py-1 text-xs font-medium tracking-wide text-white md:text-base">先着<strong className="mx-1 font-serif text-2xl leading-none tracking-tight md:text-4xl">3</strong>院限定</span>
+                <div>
+                  <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-[#a88750] decoration-2">128,000円（税込）〜</span></p>
+                  <p className="font-serif leading-none"><strong className="text-[clamp(2.65rem,5.7vw,4.5rem)] font-medium tracking-tight text-[#806334]">98,000</strong><span className="ml-1 text-lg md:text-2xl">円（税込）〜</span></p>
+                </div>
+              </div>
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <a href="#contact-form" className="inline-flex justify-center bg-[#a88750] px-6 py-3.5 text-sm font-medium tracking-wide text-white transition-colors hover:bg-[#947442]">無料で相談する</a>
+                <a href="#pricing" className="inline-flex justify-center border border-[var(--sumi)] bg-white/72 px-6 py-3.5 text-sm tracking-wide text-[var(--sumi)] transition-colors hover:bg-[var(--sumi)] hover:text-white">料金を見る</a>
               </div>
             </div>
           </div>
@@ -103,32 +124,12 @@ export function Hero() {
       <div className="absolute left-0 top-0 h-56 w-56 rounded-full bg-[#f4efe5] blur-3xl" />
       <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#eee8dc] blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6 py-10 md:py-16 lg:px-12 lg:py-20">
+      <div className="relative mx-auto max-w-7xl px-4 py-4 md:px-6 md:py-8 lg:px-12 lg:py-10">
         <div className="relative overflow-hidden border border-[#d8c8aa] bg-[#fbf8f1] shadow-[0_24px_90px_rgba(83,63,30,0.10)]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_16%,rgba(216,200,170,0.45),transparent_32%),radial-gradient(circle_at_88%_18%,rgba(30,58,95,0.10),transparent_26%),linear-gradient(135deg,#fff_0%,#fbf8f1_56%,#f4efe5_100%)]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/76 via-white/42 to-white/16" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/76 via-transparent to-white/34" />
-          <div className="absolute inset-y-0 right-0 hidden w-[34%] bg-gradient-to-l from-[#fbf8f1]/60 via-[#fbf8f1]/24 to-transparent md:block" />
-
-          <PhonePreview className="hero-reveal absolute bottom-[clamp(0.7rem,2.1vw,2rem)] right-[clamp(0.7rem,2.8vw,3rem)] z-20 hidden w-[clamp(96px,15vw,230px)] rotate-[2.5deg] md:block" />
-
-          <div className="relative z-10 min-h-[clamp(520px,68svh,780px)] px-5 py-9 md:flex md:items-center md:px-[clamp(1.6rem,3.6vw,3.5rem)] md:py-[clamp(2.3rem,4.5vw,4rem)] md:pr-[clamp(8rem,25vw,23rem)]">
+          <HeroMotionStory />
+          <div className="relative z-10 px-5 py-8 md:px-[clamp(1.6rem,3.6vw,3.5rem)] md:py-[clamp(2rem,4vw,3.4rem)]">
             <div className="w-full max-w-4xl">
-              <p className="hero-reveal hero-reveal-label flex items-center gap-3 text-[11px] tracking-[0.2em] text-[#806334] md:text-xs">
-                <span className="h-px w-8 bg-[#b99a62]" />整骨院・接骨院・鍼灸院・整体院専門のWeb伴走
-              </p>
-              <p className="hero-reveal hero-reveal-label mt-4 inline-flex border border-[#d8c8aa] bg-white/80 px-3 py-1 text-[11px] font-bold tracking-wide text-[#6f5528] backdrop-blur">
-                院長の「施術以外」を、Webからまるっと支えます
-              </p>
-              <h1 className="mt-5 font-serif text-3xl leading-[1.55] tracking-[0.06em] text-[var(--sumi)] md:text-[clamp(2.1rem,4.35vw,3.45rem)]">
-                <span className="hero-title-mask"><span className="hero-title-line md:whitespace-nowrap">治療院「専門」パートナー。</span></span>
-                <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">HPも、MEOも、LINEも、</span></span>
-                <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">まるっと伴走します。</span></span>
-              </h1>
-
-              <HeroMotionStory />
-
-              <p className="hero-reveal hero-reveal-description mb-4 mt-5 max-w-3xl text-sm leading-relaxed text-[var(--sumi-nezumi)]">
+              <p className="hero-reveal hero-reveal-description mb-4 max-w-3xl text-sm leading-relaxed text-[var(--sumi-nezumi)]">
                 開業前の情報整理、既存ホームページの乗り換え、Googleマップからの問い合わせ改善まで。院長が施術に集中できるよう、Web集客の土台をまとめて整えます。
               </p>
               <div className="hero-reveal mb-4 grid max-w-4xl grid-cols-1 gap-px bg-[#d8c8aa] sm:grid-cols-2 md:grid-cols-4">
@@ -147,45 +148,7 @@ export function Hero() {
                   既存HPがある院は、予約導線・料金表記・スマホ表示の改善点を無料で3つ診断。HPがない院は、開業・集客に必要な導線を整理します。診断結果だけの受け取りでも大丈夫です。
                 </p>
               </div>
-              <div className="hero-reveal hero-reveal-cta flex flex-col gap-3 sm:flex-row">
-                <a href="#contact-form" className="inline-flex justify-center bg-[#a88750] px-6 py-3.5 text-sm font-medium tracking-wide text-white transition-colors hover:bg-[#947442]">無料で相談する</a>
-                <a href="#pricing" className="inline-flex justify-center border border-[var(--sumi)] px-6 py-3.5 text-sm tracking-wide text-[var(--sumi)] transition-colors hover:bg-[var(--sumi)] hover:text-white">料金を見る</a>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function MobileHeroVisuals() {
-  return (
-    <section className="relative overflow-hidden px-6 pb-10 pt-5 md:hidden">
-      <Image
-        src="/generated-hero.jpg"
-        alt=""
-        fill
-        aria-hidden
-        sizes="100vw"
-        className="object-cover object-[58%_center] opacity-30"
-      />
-      <div className="absolute inset-0 bg-white/68" />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/74 via-white/48 to-white/78" />
-      <div className="relative mx-auto max-w-sm">
-        <p className="w-full font-serif text-[clamp(1.35rem,7vw,1.9rem)] leading-relaxed tracking-[0.04em] text-[var(--sumi)] drop-shadow-[0_1px_12px_rgba(255,255,255,0.95)]">
-          患者さんが迷わず貴院を選択できる流れに。
-        </p>
-        <div className="mt-5 grid grid-cols-[0.8fr_1fr] items-end gap-4">
-          <PhonePreview className="w-full rotate-[-1.5deg]" />
-          <div className="relative aspect-[3/4] min-w-0 overflow-hidden rounded-[1.4rem] shadow-[0_18px_55px_rgba(83,63,30,0.18)]">
-            <Image
-              src="/mobile-therapist-smile.png"
-              alt="にっこり笑う整体師の男性"
-              fill
-              sizes="(max-width: 1023px) 45vw"
-              className="scale-110 object-cover object-[50%_18%]"
-            />
           </div>
         </div>
       </div>
