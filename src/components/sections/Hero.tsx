@@ -88,14 +88,10 @@ function HeroMotionStory() {
             </p>
             <h1 className="mt-5 font-serif text-[clamp(2rem,8.4vw,2.7rem)] leading-[1.34] tracking-[0.035em] text-[var(--sumi)] md:text-[clamp(2.55rem,4.6vw,4rem)] md:leading-[1.38]">
               <span className="hero-title-mask"><span className="hero-title-line md:whitespace-nowrap">治療院専門のWebパートナー。</span></span>
-              <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">HP・MEO・LINEを、</span></span>
+              <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">HPから集客強化まで、</span></span>
               <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">まるっと伴走。</span></span>
             </h1>
             <div className="mt-5 max-w-2xl border-l border-[#b99a62] bg-white/64 px-[clamp(0.9rem,2vw,1.45rem)] py-[clamp(0.78rem,1.7vw,1.25rem)] shadow-[0_18px_55px_rgba(83,63,30,0.12)] backdrop-blur-[5px]">
-              <div className="mb-3 flex flex-wrap items-center gap-2">
-                <span className="bg-white/88 px-3 py-1 text-[10px] font-bold tracking-[0.16em] text-[#806334] backdrop-blur">Web伴走イメージ</span>
-                <span className="bg-[var(--fukai-ai)]/90 px-3 py-1 text-[10px] font-bold tracking-wide text-white backdrop-blur">検索→比較→相談まで設計</span>
-              </div>
               <p className="text-[clamp(0.86rem,1.55vw,1.12rem)] leading-[1.75] text-[var(--sumi-nezumi)] md:leading-[1.9]">
                 ホームページ制作だけで終わらせず、Googleマップ、公式LINE、Instagram、広告、アクセス改善まで。バラバラに外注するより低コストで、院の世界観もブレません。
               </p>
