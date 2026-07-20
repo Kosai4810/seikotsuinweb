@@ -44,7 +44,7 @@ export function Flow() {
   return (
     <section id="flow" className="scroll-mt-24 py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionLabel number="05" label="制作の流れ" />
+        <SectionLabel number="06" label="制作の流れ" />
 
         <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-8">
           制作の流れ

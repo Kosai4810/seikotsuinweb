@@ -57,6 +57,46 @@ function PhonePreview({ className = "" }: { className?: string }) {
   );
 }
 
+function HeroMotionStory() {
+  return (
+    <div className="hero-reveal hero-reveal-gallery relative mt-6 max-w-4xl overflow-hidden border border-[#d8c8aa] bg-white/80 p-2 shadow-[0_24px_72px_rgba(83,63,30,0.13)] backdrop-blur">
+      <div className="relative min-h-[clamp(330px,41vw,455px)] overflow-hidden bg-[#f4efe5]">
+        {slides.map(([src, alt], index) => (
+          <Image
+            key={src}
+            src={src}
+            alt={index === 0 ? alt : ""}
+            aria-hidden={index > 0}
+            fill
+            sizes="(min-width: 1024px) 820px, 92vw"
+            className="hero-story-frame object-contain"
+          />
+        ))}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_20%,rgba(255,255,255,0.22),transparent_30%),linear-gradient(90deg,rgba(255,255,255,0.94)_0%,rgba(255,255,255,0.70)_36%,rgba(255,255,255,0.08)_74%,rgba(255,255,255,0.34)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#fbf8f1]/96 via-[#fbf8f1]/58 to-transparent" />
+        <div className="relative z-10 flex min-h-[clamp(330px,41vw,455px)] items-end px-[clamp(1rem,3vw,2.2rem)] py-[clamp(1rem,2.8vw,2rem)]">
+          <div className="max-w-2xl border-l border-[#b99a62] bg-white/54 px-[clamp(1rem,2vw,1.45rem)] py-[clamp(0.85rem,1.7vw,1.25rem)] shadow-[0_18px_55px_rgba(83,63,30,0.12)] backdrop-blur-[5px]">
+            <div className="mb-3 flex flex-wrap items-center gap-2">
+              <span className="bg-white/86 px-3 py-1 text-[10px] font-bold tracking-[0.16em] text-[#806334] backdrop-blur">Web伴走イメージ</span>
+              <span className="bg-[var(--fukai-ai)]/90 px-3 py-1 text-[10px] font-bold tracking-wide text-white backdrop-blur">HP・MEO・LINEをひとつの流れに</span>
+            </div>
+            <p className="text-[clamp(0.98rem,1.65vw,1.22rem)] leading-[1.9] text-[var(--sumi-nezumi)]">
+              ホームページ制作だけで終わらせず、Googleマップ、公式LINE、Instagram、広告、アクセス改善まで。バラバラに外注するより低コストで、院の世界観もブレません。
+            </p>
+            <div className="mt-5 flex flex-wrap items-end gap-x-5 gap-y-3">
+              <span className="inline-flex items-baseline bg-[#a88750] px-3 py-1 text-sm font-medium tracking-wide text-white md:text-base">先着<strong className="mx-1 font-serif text-3xl leading-none tracking-tight md:text-4xl">3</strong>院限定</span>
+              <div>
+                <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-[#a88750] decoration-2">128,000円（税込）〜</span></p>
+                <p className="font-serif leading-none"><strong className="text-[clamp(3.1rem,5.7vw,4.5rem)] font-medium tracking-tight text-[#806334]">98,000</strong><span className="ml-1 text-xl md:text-2xl">円（税込）〜</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-white pt-24 text-[var(--sumi)] lg:pt-28">
@@ -65,13 +105,9 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-6 py-10 md:py-16 lg:px-12 lg:py-20">
         <div className="relative overflow-hidden border border-[#d8c8aa] bg-[#fbf8f1] shadow-[0_24px_90px_rgba(83,63,30,0.10)]">
-          <div className="absolute inset-0 opacity-[0.72]">
-            {slides.map(([src, alt], index) => (
-              <Image key={src} src={src} alt={index === 0 ? alt : ""} aria-hidden={index > 0} fill priority={index === 0} sizes="100vw" className={`hero-cinema-frame object-cover ${index === 0 ? "object-[62%_center]" : "object-center"}`} />
-            ))}
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-white/12" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/68 via-transparent to-white/12" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_16%,rgba(216,200,170,0.45),transparent_32%),radial-gradient(circle_at_88%_18%,rgba(30,58,95,0.10),transparent_26%),linear-gradient(135deg,#fff_0%,#fbf8f1_56%,#f4efe5_100%)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/76 via-white/42 to-white/16" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/76 via-transparent to-white/34" />
           <div className="absolute inset-y-0 right-0 hidden w-[34%] bg-gradient-to-l from-[#fbf8f1]/60 via-[#fbf8f1]/24 to-transparent md:block" />
 
           <PhonePreview className="hero-reveal absolute bottom-[clamp(0.7rem,2.1vw,2rem)] right-[clamp(0.7rem,2.8vw,3rem)] z-20 hidden w-[clamp(96px,15vw,230px)] rotate-[2.5deg] md:block" />
@@ -90,15 +126,7 @@ export function Hero() {
                 <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">まるっと伴走します。</span></span>
               </h1>
 
-              <div className="hero-reveal hero-reveal-copy mt-6 border-l border-[#b99a62] bg-white/58 py-1 pl-5 backdrop-blur-[2px] md:pl-7">
-                <p className="text-base leading-8 text-[var(--sumi-nezumi)] md:text-lg">
-                  ホームページ制作だけで終わらせず、Googleマップ、公式LINE、Instagram、広告、アクセス改善まで。バラバラに外注するより低コストで、院の世界観もブレません。
-                </p>
-                <div className="mt-5 flex flex-wrap items-end gap-x-5 gap-y-3">
-                  <span className="inline-flex items-baseline bg-[#a88750] px-3 py-1 text-sm font-medium tracking-wide text-white md:text-base">先着<strong className="mx-1 font-serif text-3xl leading-none tracking-tight md:text-4xl">3</strong>院限定</span>
-                  <div><p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-[#a88750] decoration-2">128,000円（税込）〜</span></p><p className="font-serif leading-none"><strong className="text-5xl font-medium tracking-tight text-[#806334] md:text-[clamp(3.6rem,6vw,4.5rem)]">98,000</strong><span className="ml-1 text-xl md:text-2xl">円（税込）〜</span></p></div>
-                </div>
-              </div>
+              <HeroMotionStory />
 
               <p className="hero-reveal hero-reveal-description mb-4 mt-5 max-w-3xl text-sm leading-relaxed text-[var(--sumi-nezumi)]">
                 開業前の情報整理、既存ホームページの乗り換え、Googleマップからの問い合わせ改善まで。院長が施術に集中できるよう、Web集客の土台をまとめて整えます。

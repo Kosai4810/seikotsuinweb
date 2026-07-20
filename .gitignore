@@ -45,6 +45,7 @@ next-env.d.ts
 # Codex/local working artifacts
 .codex-tmp/
 tmp/
+.venv/
 
 # Unrelated generated exam artifacts accidentally left in this workspace
 outputs/original_exam/

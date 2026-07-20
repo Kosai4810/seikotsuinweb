@@ -57,7 +57,7 @@ export function FAQ() {
   return (
     <section id="faq" className="scroll-mt-24 py-16 md:py-20 bg-[var(--kinari)]">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
-        <SectionLabel number="06" label="よくある質問" />
+        <SectionLabel number="07" label="よくある質問" />
 
         <h2 className="heading-lg text-2xl md:text-3xl text-[var(--sumi)] mb-4">
           よくある質問

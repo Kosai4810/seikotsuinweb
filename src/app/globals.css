@@ -225,9 +225,25 @@ body {
 .hero-cinema-frame:nth-child(3) { animation-delay: 10s; }
 
 @keyframes heroCinema {
-  0% { opacity: 0; transform: scale(1.035) translate3d(10px, 4px, 0); }
+  0% { opacity: 0; transform: scale(1.006) translate3d(4px, 2px, 0); }
   7%, 29% { opacity: 1; }
-  36%, 100% { opacity: 0; transform: scale(1.07) translate3d(-8px, -3px, 0); }
+  36%, 100% { opacity: 0; transform: scale(1.018) translate3d(-4px, -2px, 0); }
+}
+
+.hero-story-frame {
+  opacity: 0;
+  transform: translate3d(14px, 0, 0) scale(0.982);
+  animation: heroStoryMotion 15s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  will-change: opacity, transform;
+}
+
+.hero-story-frame:nth-child(2) { animation-delay: 5s; }
+.hero-story-frame:nth-child(3) { animation-delay: 10s; }
+
+@keyframes heroStoryMotion {
+  0% { opacity: 0; transform: translate3d(14px, 0, 0) scale(0.982); }
+  8%, 31% { opacity: 1; }
+  45%, 100% { opacity: 0; transform: translate3d(-14px, 0, 0) scale(0.996); }
 }
 
 .phone-site-track {
@@ -255,6 +271,31 @@ body {
   animation-delay: 0.7s;
 }
 
+.case-site-scroll {
+  animation: caseSiteScroll 9s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  will-change: transform;
+}
+
+.case-cta-glow {
+  animation: caseCtaGlow 2.8s ease-in-out infinite;
+}
+
+.case-mini-card {
+  animation: caseMiniFloat 5.2s ease-in-out infinite;
+}
+
+.case-route-node {
+  animation: caseRouteNode 4.8s ease-in-out infinite;
+}
+
+.case-route-dot {
+  animation: caseRouteDot 4.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.case-launch-card {
+  animation: caseLaunchFloat 5.6s ease-in-out infinite;
+}
+
 @keyframes phoneCtaPulse {
   0%, 100% { transform: translateY(0); box-shadow: 0 0 0 rgba(30, 58, 95, 0); }
   50% { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(30, 58, 95, 0.22); }
@@ -263,6 +304,41 @@ body {
 @keyframes phoneCardFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-3px); }
+}
+
+@keyframes caseSiteScroll {
+  0%, 14% { transform: translateY(0); }
+  45%, 62% { transform: translateY(-22%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes caseCtaGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(30, 58, 95, 0); transform: translateY(0); }
+  50% { box-shadow: 0 12px 28px rgba(30, 58, 95, 0.22); transform: translateY(-2px); }
+}
+
+@keyframes caseMiniFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes caseRouteNode {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+@keyframes caseRouteDot {
+  0%, 8% { transform: translate(-50%, 0); opacity: 0; }
+  14%, 86% { opacity: 1; }
+  30% { transform: translate(-50%, 86px); }
+  52% { transform: translate(-50%, 172px); }
+  74% { transform: translate(-50%, 258px); }
+  100% { transform: translate(-50%, 336px); opacity: 0; }
+}
+
+@keyframes caseLaunchFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(-0.4deg); }
 }
 
 .hero-title-mask {
@@ -305,11 +381,19 @@ body {
   html { scroll-behavior: auto; }
   .hero-cinema-frame { animation: none; opacity: 0; transform: none; }
   .hero-cinema-frame:first-child { opacity: 1; }
+  .hero-story-frame { animation: none; opacity: 0; transform: none; }
+  .hero-story-frame:first-child { opacity: 1; }
   .hero-title-line,
   .hero-reveal { animation: none; opacity: 1; transform: none; clip-path: none; }
   .phone-site-track { animation: none; transform: translateY(-18%); }
   .phone-site-cta,
-  .phone-site-card { animation: none; }
+  .phone-site-card,
+  .case-site-scroll,
+  .case-cta-glow,
+  .case-mini-card,
+  .case-route-node,
+  .case-route-dot,
+  .case-launch-card { animation: none; }
   .pricing-popup { transition-duration: 0.01ms; }
   .campaign-badge::after { animation: none; left: 135%; }
 }

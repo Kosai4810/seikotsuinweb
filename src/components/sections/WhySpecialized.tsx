@@ -19,7 +19,7 @@ export function WhySpecialized() {
   return (
     <section id="about" className="relative overflow-hidden bg-[#eee8dc] py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionLabel number="04" label="専門性" />
+        <SectionLabel number="05" label="専門性" />
         <div className="max-w-6xl">
             <h2 className="heading-lg max-w-none text-[clamp(1.25rem,2.25vw,1.9rem)] text-[var(--sumi)] md:whitespace-nowrap">
               整骨院・接骨院・鍼灸院・整体院に特化しているから、院ごとの強みと患者さんの導線を設計できます。

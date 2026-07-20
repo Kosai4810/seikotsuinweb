@@ -81,7 +81,7 @@ export function Services() {
   return (
     <section id="services" className="scroll-mt-24 bg-white py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionLabel number="03" label="サービス" />
+        <SectionLabel number="04" label="サービス" />
         <div className="mb-9 max-w-3xl md:mb-12">
           <h2 className="heading-lg mb-4 text-2xl text-[var(--sumi)] md:text-3xl">提供サービス</h2>
           <p className="leading-relaxed text-[var(--sumi-nezumi)]">

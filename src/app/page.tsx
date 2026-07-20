@@ -7,6 +7,7 @@ import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { Services } from "@/components/sections/Services";
+import { CaseStudies } from "@/components/sections/CaseStudies";
 import { MobileCTA } from "@/components/common/MobileCTA";
 import { ValueComparison } from "@/components/sections/ValueComparison";
 import { siteConfig } from "@/config/site";
@@ -64,6 +65,7 @@ export default function Home() {
         <MobileHeroVisuals />
         <ValueComparison />
         <Pricing />
+        <CaseStudies />
         <Services />
         <WhySpecialized />
         <Flow />
