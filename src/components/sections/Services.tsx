@@ -9,8 +9,8 @@ const services = [
     lead: "院の魅力と必要情報を、スマホで見やすい形に整理します。",
     description:
       "施術内容、料金、アクセス、予約方法、院の考え方まで。初めての患者さんが比較しやすく、問い合わせまで進みやすいホームページを制作します。",
-    image: "/service-01-website.png",
-    alt: "ホームページ制作の打ち合わせをする治療院オーナーと制作者のリアルなイラスト",
+    image: "/service-lineart-01-website.png",
+    alt: "ホームページ制作の相談を表す背景なしイラスト",
   },
   {
     number: "02",
@@ -18,8 +18,8 @@ const services = [
     lead: "見た人が迷わず相談できる道筋を作ります。",
     description:
       "電話、メール、問い合わせフォーム、アクセス情報への導線をスマートフォン優先で設計。営業時間外に見た人も次の行動へ進みやすい構成にします。",
-    image: "/service-02-contact.png",
-    alt: "問い合わせメールとスマートフォンのフォームを確認するスタッフのリアルなイラスト",
+    image: "/service-lineart-02-contact.png",
+    alt: "予約・問い合わせ導線を表す背景なしイラスト",
   },
   {
     number: "03",
@@ -27,8 +27,8 @@ const services = [
     lead: "近くで探している患者さんに、選ばれやすい状態へ。",
     description:
       "Googleビジネスプロフィールの情報、写真、口コミ導線、ホームページへのリンクを整理し、検索から来院までを自然につなげます。",
-    image: "/service-03-map.png",
-    alt: "スマートフォンで地図と口コミ情報を確認する治療院オーナーのリアルなイラスト",
+    image: "/service-lineart-03-map.png",
+    alt: "Googleマップと口コミ導線を表す背景なしイラスト",
   },
   {
     number: "04",
@@ -36,8 +36,8 @@ const services = [
     lead: "電話しにくい人も、相談しやすい入口を用意します。",
     description:
       "公式LINE、予約フォーム、電話、メールの役割を整理。症状・料金・初回の流れを確認したあと、無理なく相談できる導線を設計します。",
-    image: "/service-04-line.png",
-    alt: "チャット予約導線をスマートフォンで案内する受付スタッフのリアルなイラスト",
+    image: "/service-lineart-04-line.png",
+    alt: "公式LINEと予約導線を表す背景なしイラスト",
   },
   {
     number: "05",
@@ -45,8 +45,8 @@ const services = [
     lead: "投稿や広告を、ホームページへの流れに変えます。",
     description:
       "Instagram投稿の方向性、Google広告の受け皿、キャンペーン導線まで設計。見られて終わりではなく、比較・相談につながる形にします。",
-    image: "/service-05-instagram.png",
-    alt: "SNS投稿と広告クリエイティブをスマートフォンで確認する治療院スタッフのリアルなイラスト",
+    image: "/service-lineart-05-instagram.png",
+    alt: "Instagramと広告運用の初期設計を表す背景なしイラスト",
   },
   {
     number: "06",
@@ -54,8 +54,8 @@ const services = [
     lead: "公開後の数字を見て、次に直す場所を判断します。",
     description:
       "アクセス数、問い合わせ数、見られているページを確認し、必要な改善を提案します。作って終わりではなく、運用しながら整えます。",
-    image: "/service-06-analytics.png",
-    alt: "アクセスデータのグラフを見ながら改善方針を相談するリアルなイラスト",
+    image: "/service-lineart-06-analytics.png",
+    alt: "アクセス流入と改善管理を表す背景なしイラスト",
   },
   {
     number: "07",
@@ -63,8 +63,8 @@ const services = [
     lead: "開業前に必要なWebまわりをまとめて準備します。",
     description:
       "ホームページ、Googleマップ、Instagram、チラシ・名刺など、開業時に必要な情報と集客導線を一緒に整理します。",
-    image: "/service-07-opening.png",
-    alt: "開業した治療院オーナーが完成したホームページを見て満足しているリアルなイラスト",
+    image: "/service-lineart-07-opening.png",
+    alt: "開業Webサポートを表す背景なしイラスト",
   },
 ] as const;
 
@@ -102,13 +102,13 @@ export function Services() {
                   </div>
                   <p className="text-sm font-bold leading-7 text-[var(--sumi)]">{service.lead}</p>
                 </div>
-                <div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-xl border border-[#e4d9c7] bg-[#f7f3eb] shadow-sm md:h-24 md:w-28">
+                <div className="relative h-24 w-28 shrink-0 md:h-28 md:w-32">
                   <Image
                     src={service.image}
                     alt={service.alt}
                     fill
-                    sizes="(min-width: 768px) 112px, 96px"
-                    className="object-cover"
+                    sizes="(min-width: 768px) 128px, 112px"
+                    className="object-contain drop-shadow-[0_14px_22px_rgba(83,63,30,0.08)]"
                   />
                 </div>
               </div>

@@ -83,26 +83,26 @@ function HeroMotionStory() {
             <p className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] text-[#806334] md:text-xs">
               <span className="h-px w-8 bg-[#b99a62]" />整骨院・接骨院・鍼灸院・整体院専門
             </p>
-            <p className="mt-4 inline-flex border border-[#d8c8aa] bg-white/86 px-3 py-1 text-[11px] font-bold tracking-wide text-[#6f5528] shadow-sm backdrop-blur">
+            <p className="mt-5 inline-flex border border-[#d8c8aa] bg-white/86 px-3 py-1 text-[11px] font-medium tracking-wide text-[#6f5528] shadow-sm backdrop-blur">
               院長の「施術以外」を、Webからまるっと支えます
             </p>
-            <h1 className="mt-5 font-serif text-[clamp(2rem,8.4vw,2.7rem)] leading-[1.34] tracking-[0.035em] text-[var(--sumi)] md:text-[clamp(2.55rem,4.6vw,4rem)] md:leading-[1.38]">
+            <h1 className="mt-6 font-serif text-[clamp(2.05rem,8.6vw,2.8rem)] leading-[1.34] tracking-[0.035em] text-[var(--sumi)] md:mt-7 md:text-[clamp(2.55rem,4.6vw,4rem)] md:leading-[1.38]">
               <span className="hero-title-mask"><span className="hero-title-line md:whitespace-nowrap">治療院専門のWebパートナー。</span></span>
               <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">HPから集客強化まで、</span></span>
               <span className="hero-title-mask"><span className="hero-title-line hero-title-line-delay">まるっと伴走。</span></span>
             </h1>
-            <div className="mt-5 max-w-2xl border-l border-[#b99a62] bg-white/64 px-[clamp(0.9rem,2vw,1.45rem)] py-[clamp(0.78rem,1.7vw,1.25rem)] shadow-[0_18px_55px_rgba(83,63,30,0.12)] backdrop-blur-[5px]">
+            <div className="mt-6 max-w-2xl border-l-2 border-[#b99a62] bg-white/64 px-[clamp(1.1rem,2.2vw,1.7rem)] py-[clamp(1rem,2vw,1.5rem)] shadow-[0_18px_55px_rgba(83,63,30,0.12)] backdrop-blur-[5px] md:mt-8">
               <p className="text-[clamp(0.86rem,1.55vw,1.12rem)] leading-[1.75] text-[var(--sumi-nezumi)] md:leading-[1.9]">
                 ホームページ制作だけで終わらせず、Googleマップ、公式LINE、Instagram、広告、アクセス改善まで。バラバラに外注するより低コストで、院の世界観もブレません。
               </p>
-              <div className="mt-4 flex flex-wrap items-end gap-x-5 gap-y-3 md:mt-5">
+              <div className="mt-5 flex flex-wrap items-end gap-x-5 gap-y-3 md:mt-6">
                 <span className="inline-flex items-baseline bg-[#a88750] px-3 py-1 text-xs font-medium tracking-wide text-white md:text-base">先着<strong className="mx-1 font-serif text-2xl leading-none tracking-tight md:text-4xl">3</strong>院限定</span>
                 <div>
                   <p className="mb-1 text-xs tracking-wide text-[var(--nibi)]">通常 <span className="line-through decoration-[#a88750] decoration-2">128,000円（税込）〜</span></p>
                   <p className="font-serif leading-none"><strong className="text-[clamp(2.65rem,5.7vw,4.5rem)] font-medium tracking-tight text-[#806334]">98,000</strong><span className="ml-1 text-lg md:text-2xl">円（税込）〜</span></p>
                 </div>
               </div>
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a href="#contact-form" className="inline-flex justify-center bg-[#a88750] px-6 py-3.5 text-sm font-medium tracking-wide text-white transition-colors hover:bg-[#947442]">無料で相談する</a>
                 <a href="#pricing" className="inline-flex justify-center border border-[var(--sumi)] bg-white/72 px-6 py-3.5 text-sm tracking-wide text-[var(--sumi)] transition-colors hover:bg-[var(--sumi)] hover:text-white">料金を見る</a>
               </div>
