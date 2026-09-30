@@ -31,7 +31,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-sm border-b border-[var(--usuzumi-line)]"
+          ? "bg-cream/95 backdrop-blur-sm border-b border-line-warm"
           : "bg-transparent"
       }`}
     >
@@ -69,7 +69,7 @@ export function Header() {
           {/* CTA Button */}
           <Link
             href="/#contact-form"
-            className="hidden lg:inline-flex items-center px-6 py-3 text-sm bg-[var(--fukai-ai)] text-white tracking-wide hover:bg-[#152d4a] transition-colors duration-300"
+            className="hidden lg:inline-flex items-center rounded-full px-6 py-3 text-sm font-extrabold bg-[#C67C08] text-white tracking-wide hover:bg-[#a96806] transition-colors duration-300 shadow-[0_4px_0_rgba(107,84,58,0.18)]"
           >
             無料HP診断を受ける
           </Link>
@@ -124,7 +124,7 @@ export function Header() {
           ))}
           <Link
             href="/#contact-form"
-            className="block w-full text-center py-4 bg-[var(--fukai-ai)] text-white tracking-wide"
+            className="block w-full rounded-full text-center py-4 font-extrabold bg-[#C67C08] text-white tracking-wide"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             無料HP診断を受ける

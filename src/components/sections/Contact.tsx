@@ -4,9 +4,10 @@ import { FormEvent, useState } from "react";
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { CTAGroup } from "@/components/ui/CTAGroup";
+import { Mascot } from "@/components/common/Mascot";
 import { siteConfig } from "@/config/site";
 
-const inputClass = "w-full px-4 py-3.5 border border-[var(--usuzumi-line)] bg-white text-[var(--sumi)] focus:border-[var(--fukai-ai)] focus:outline-none transition-colors";
+const inputClass = "w-full rounded-xl px-4 py-3.5 border-2 border-[var(--usuzumi-line)] bg-white text-[var(--sumi)] focus:border-[var(--fukai-ai)] focus:outline-none transition-colors";
 
 export function Contact() {
   const [state, setState] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -40,7 +41,11 @@ export function Contact() {
   return (
     <section id="contact" className="py-16 md:py-20 bg-[var(--sumi)]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-        <div className="col-span-1 lg:col-span-5 min-w-0">
+        <div className="wm-reveal col-span-1 lg:col-span-5 min-w-0">
+          <div className="mb-4 flex items-center gap-3">
+            <Mascot size={92} label="" wave />
+            <span className="wm-pill wm-bob !bg-white/10 !border-white/25 !text-white">お気軽にどうぞ</span>
+          </div>
           <SectionLabel number="08" label="お問い合わせ" tone="light" />
           <h2 className="heading-lg text-2xl md:text-3xl text-white mb-6">先着3院のスターター制作と、無料HP診断を受付中です。</h2>
           <p className="text-white/70 leading-loose mb-10">
@@ -52,8 +57,8 @@ export function Contact() {
             {siteConfig.email && <p>メール：{siteConfig.email}</p>}
           </div>
         </div>
-        <div id="contact-form" className="col-span-1 lg:col-span-6 lg:col-start-7 scroll-mt-32 min-w-0">
-          <div className="bg-white p-7 md:p-10 lg:p-12">
+        <div id="contact-form" className="wm-reveal col-span-1 lg:col-span-6 lg:col-start-7 scroll-mt-32 min-w-0">
+          <div className="rounded-3xl bg-white p-7 md:p-10 lg:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
             {state === "success" ? (
               <div role="status" className="py-16 text-center">
                 <h3 className="heading-md text-xl mb-4">送信が完了しました</h3>
@@ -81,7 +86,7 @@ export function Contact() {
                 <div className="absolute -left-[9999px]" aria-hidden="true"><label htmlFor="website">Website</label><input id="website" name="website" tabIndex={-1} autoComplete="off" /></div>
                 <label className="flex items-start gap-3 text-sm text-[var(--sumi-nezumi)]"><input type="checkbox" name="privacy" value="agreed" required className="mt-1" /><span><Link href="/privacy" className="underline">プライバシーポリシー</Link>に同意する <Required /></span></label>
                 {state === "error" && <p role="alert" className="p-4 bg-red-50 text-red-800 text-sm">{message}</p>}
-                <button type="submit" disabled={state === "sending"} className="w-full py-4 bg-[var(--fukai-ai)] text-white text-sm tracking-wider hover:bg-[#152d4a] disabled:opacity-50">
+                <button type="submit" disabled={state === "sending"} className="wm-pulse w-full rounded-full py-4 bg-[#C67C08] text-white text-sm font-extrabold tracking-wide hover:bg-[#A96806] disabled:opacity-50">
                   {state === "sending" ? "送信中…" : "無料HP診断を受ける"}
                 </button>
               </form>

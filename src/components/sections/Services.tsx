@@ -79,7 +79,7 @@ const seoLinks = [
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-24 bg-white py-16 md:py-20">
+    <section id="services" className="scroll-mt-24 bg-paper py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionLabel number="04" label="サービス" />
         <div className="mb-9 max-w-3xl md:mb-12">
@@ -91,7 +91,7 @@ export function Services() {
 
         <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
-            <article key={service.number} className="group border-2 border-[#d8c8aa] bg-white p-5 transition-colors hover:bg-[#fbf8f1] md:p-6">
+            <article key={service.number} className="group border-2 border-[#EADFCC] bg-paper p-5 transition-colors hover:bg-[#FFFDF9] md:p-6">
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div className="min-w-0">
                   <div className="mb-3 flex items-center gap-3">
@@ -117,7 +117,7 @@ export function Services() {
           ))}
         </div>
 
-        <div className="mb-8 rounded-lg border border-[#d8c8aa] bg-[#fbf8f1] p-5 md:p-6">
+        <div className="mb-8 rounded-lg border border-[#EADFCC] bg-[#FFFDF9] p-5 md:p-6">
           <h3 className="heading-md mb-4 text-base text-[var(--sumi)]">業態・目的別に詳しく見る</h3>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {seoLinks.map(([label, href]) => (

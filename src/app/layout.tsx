@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
+import { MotionProvider } from "@/components/common/MotionProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -36,7 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="min-h-screen pb-14 lg:pb-0">{children}</body>
+      <body className="min-h-screen pb-14 lg:pb-0">
+        {children}
+        <MotionProvider />
+      </body>
     </html>
   );
 }

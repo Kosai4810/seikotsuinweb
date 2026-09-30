@@ -17,7 +17,7 @@ const promiseCards = [
 
 export function WhySpecialized() {
   return (
-    <section id="about" className="relative overflow-hidden bg-[#eee8dc] py-16 md:py-20">
+    <section id="about" className="relative overflow-hidden bg-[#FFEFD9] py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionLabel number="05" label="専門性" />
         <div className="max-w-6xl">
@@ -29,15 +29,15 @@ export function WhySpecialized() {
             </p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {promiseCards.map((promise) => (
-                <div key={promise} className="border-l-2 border-[#a88750] bg-white/80 px-5 py-4 shadow-sm">
+                <div key={promise} className="border-l-2 border-[#D98C0F] bg-paper/80 px-5 py-4 shadow-sm">
                   <p className="mt-2 text-base font-bold leading-relaxed text-[var(--sumi)]">{promise}</p>
                 </div>
               ))}
             </div>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {strengths.map(([title, description], index) => (
-                <article key={title} className="rounded-lg border border-[#d4c8b3] bg-white/85 p-5">
-                  <span className="text-[10px] font-bold tracking-[.18em] text-[#96733d]">0{index + 1}</span>
+                <article key={title} className="rounded-lg border border-[#d4c8b3] bg-paper/85 p-5">
+                  <span className="text-[10px] font-bold tracking-[.18em] text-[#6B543A]">0{index + 1}</span>
                   <h3 className="mt-2 text-base font-bold leading-snug text-[var(--sumi)]">{title}</h3>
                   <p className="mt-2 text-xs leading-6 text-[var(--sumi-nezumi)]">{description}</p>
                 </article>
